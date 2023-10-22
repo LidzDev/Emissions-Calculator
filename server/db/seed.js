@@ -25,8 +25,8 @@ db.transport.insertMany([
     {
         "mode": "Motorbike",
         "emissions": 113
-    }
-     {
+    },
+    {
         "mode": "Bus Single Decker",
         "emissions": 32
     },

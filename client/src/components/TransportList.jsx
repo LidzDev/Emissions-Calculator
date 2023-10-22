@@ -10,8 +10,10 @@ const TransportList = ({modes}) => {
 
     return (
         <section id="transportmodes">
-            <h2>Modes of Transport</h2>
+            <label htmlFor="modes">Choose a mode of Transport</label>           
+            <select id="modes" name="modes">Modes of Transport
                 {transportNodes}
+            </select>
         </section>
     )
 

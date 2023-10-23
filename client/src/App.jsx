@@ -21,13 +21,18 @@ function App() {
     setEmissionsTrip([...emissionsTrip, trip]);
   }
 
+  const removeTrip = (id) => {
+    const tripsToKeep = emmisionsTrip.filter(trip => trip._id !== id)
+    setEmissionsTrip(tripsToKeep);
+  }
+
   return (
     <>
       <nav>log & nav bar go here</nav>
       <MainTitle title={title} intro={intro}/>
       <div class="flex-box">
         <div class="calc-form">
-          <form><TripForm modes={modes} addTrip = {addTrip}/></form>
+          <form><TripForm modes={modes} addTrip = {addTrip} removeTrip ={removeTrip}/></form>
 
       
         </div>

@@ -1,9 +1,9 @@
 import {useState} from "react"
 import TransportMode from "./TransportMode"
-import { postTrip } from "./TripService"
+import { postTrip } from "../services/TripService"
 
 
-const TripForm = ({modes}) => {
+const TripForm = ({modes, addTrip}) => {
 
     const transportNodes = modes.map(mode => {
         return <TransportMode

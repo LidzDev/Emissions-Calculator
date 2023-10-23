@@ -5,6 +5,7 @@ import TransportService from './services/TransportService'
 import './App.css'
 import TripForm from './components/TripForm'
 
+
 function App() {
   const [modes, setModes] = useState([])
   const title = "CO2 Calculator"
@@ -15,6 +16,11 @@ function App() {
     .then(modes => setModes(modes))
     console.log(modes)
   }, [])
+
+  const addTrip = (trip) => {
+    setEmissionsTrip([...emissionsTrip, trip]);
+  }
+
   return (
     <>
       <MainTitle
@@ -23,8 +29,8 @@ function App() {
       />
       <div class="flex-box">
         <div class="calc-form">
-          <form><TripForm modes={modes}/></form>
-      
+          <form><TripForm modes={modes} addTrip = {addTrip}/></form>
+
       
         </div>
         <div class="form-output">

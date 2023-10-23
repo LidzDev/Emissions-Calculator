@@ -12,7 +12,7 @@ const TripForm = ({modes}) => {
     return (
         // <form onSubmit={onSubmit} id="trip-form" ></form>
         <form  id="trip-form" >
-            <h2>Record a Trip</h2>
+            {/* <h2>Record a Trip</h2> */}
             <div className="formWrap">
                 <label htmlFor="name">Name</label>
                 <input 
@@ -29,7 +29,7 @@ const TripForm = ({modes}) => {
                 // onChange={onChange} 
                 id="modes" 
                 name="modes">
-                    Modes of Transport
+                Modes of Transport
                 {transportNodes}
                 </select>
             </div>

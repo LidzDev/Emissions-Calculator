@@ -78,4 +78,106 @@ db.transport.insertMany([
         "mode": "Walk",
         "emissions": 36
     }
-])
+]);
+
+db.employees.insertMany([
+    {
+        "name": "Bob Bobson",
+        "address1": "Johannes Van Der Waalstraat 63",
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "postcode": "1098 PN"
+        //coordinates: 52.352295, 4.942140
+    },
+    {
+        "name": "Jeremy Johnson",
+        "address1": "Zuidpolderstraat 200",
+        "city": "Haarlem",
+        "country": "Netherlands",
+        "postcode": "2032 PG"
+        //coordinates: 52.380154, 4.648886
+    },
+    {
+        "name": "Arlow Marlow",
+        "address1": "Abrikozenstraat 80",
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "postcode": "1033 KE"
+        //coordinates: 52.411327, 4.899033
+    },
+    {
+        "name": "Bill Wilson",
+        "address1": "Westhove 13-1, Amstelveen",
+        "city": "Amstelveen",
+        "country": "Netherlands",
+        "postcode": "1033 KE"
+        //coordinates: 52.278706, 4.819517
+    },
+    {
+        "name": "Isabella Arabella",
+        "address1": "46 Camel Rd",
+        "city": "London",
+        "country": "United Kingdom",
+        "postcode": "E16 2DD"
+        //coordinates: 51.503420, 0.045320
+    },
+    {
+        "name": "Winifried Watson",
+        "address1": "Govert Flinckstraat 366A",
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "postcode": "1074 CG"
+        //coordinates: 52.357235, 4.901551
+    },
+    {
+        "name": "Peter Peterson",
+        "address1": "Parallelweg 5",
+        "city": "Bussum",
+        "country": "Netherlands",
+        "postcode": "1405 AE"
+        //coordinates: 52.280747, 5.156302
+    },
+    {
+        "name": "Hattie Hattersworth",
+        "address1": "Pampagras 1-25",
+        "city": "Rotterdam",
+        "country": "Netherlands",
+        "postcode": "3068 PL"
+        //coordinates: 51.957132, 4.547503
+    },
+    {
+        "name": "Neville Neilsson",
+        "address1": "Van Walbeeckstraat 72III",
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "postcode": "1058 CW"
+        //coordinates: 52.362091, 4.851007
+    },
+    {
+        "name": "Hubert Henklestenk",
+        "address1": "Van Walbeeckstraat 72III",
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "postcode": "1058 CW"
+        //coordinates: 52.362091, 4.851007
+    },
+    {
+        "name": "Kelly Clarkson",
+        "address1": "La Croixstraat 36",
+        "city": "Utrecht",
+        "country": "Netherlands",
+        "postcode": "3555 CL"
+        //coordinates: 52.116266, 5.078749
+    }
+]);
+
+db.business.insertOne([
+    {
+        "name": "Heineken Experience",
+        "address1": "Stadhouderskade 78",
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "postcode": "1072 AE"
+        //coordinates: 52.358008, 4.891746
+    }
+]);

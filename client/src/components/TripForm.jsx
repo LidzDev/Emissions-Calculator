@@ -58,7 +58,7 @@ const TripForm = ({modes, addTrip}) => {
                 onChange={onChange} 
                 id="modes" 
                 name="modes">
-                    Modes of Transport
+                Modes of Transport
                 {transportNodes}
                 </select>
             </div>

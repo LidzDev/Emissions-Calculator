@@ -21,12 +21,11 @@ function App() {
       title={title}
       intro={intro}
       />
-      <TripForm
-        modes={modes}
-      />
       <div class="flex-box">
         <div class="calc-form">
-          <form><p>form goes here</p></form>
+          <form><TripForm modes={modes}/></form>
+      
+      
         </div>
         <div class="form-output">
         <p>Estimated CO2 emissions: </p>

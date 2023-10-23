@@ -1,6 +1,7 @@
 import {useState} from "react"
 import TransportMode from "./TransportMode"
 import Employee from "./Employee"
+
 const TripForm = ({modes, employees}) => {
 
     const transportNodes = modes.map(mode => {
@@ -32,7 +33,8 @@ const TripForm = ({modes, employees}) => {
                     </select>
             </div>
             <div className="formWrap">
-                <label htmlFor="modes">Mode of Transport</label><br></br>
+
+                <label htmlFor="modes">Mode of Transport</label><br/>
                 <select 
                 // onChange={onChange} 
                 id="modes" 
@@ -42,7 +44,7 @@ const TripForm = ({modes, employees}) => {
                 </select>
             </div>
             <div className="formWrap">
-                <label htmlFor="distance">Kilometres (km)</label><br></br>
+                <label htmlFor="distance">Kilometres (km)</label><br/>
                 <input 
                     // onChange={onChange} 
                     type="number" 
@@ -52,7 +54,7 @@ const TripForm = ({modes, employees}) => {
                     />
             </div>
             <div className="formWrap">
-                <label htmlFor="trips">Trips per week</label><br></br>
+                <label htmlFor="trips">Trips per week</label><br/>
                 <input 
                     // onChange={onChange} 
                     type="number" 

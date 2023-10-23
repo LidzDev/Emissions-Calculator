@@ -1,6 +1,6 @@
-import TransportMode from "./TransportMode"
+// import TransportMode from "./TransportMode"
 
-const TripTable = ({mode}) => {
+const TripTable = (mode) => {
     return (
         <section>
             <p>You company's total emissions</p> 
@@ -27,6 +27,7 @@ const TripTable = ({mode}) => {
                 </tr> 
             </table>
         </section>
+        // <h1>I'm the TripTable</h1>
     )
 }
 

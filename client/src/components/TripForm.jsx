@@ -1,9 +1,10 @@
 import {useState} from "react"
 import TransportMode from "./TransportMode"
 import { postTrip } from "../services/TripService"
+import Employee from "./Employee"
 
+const TripForm = ({modes, employees, addTrip}) => {
 
-const TripForm = ({modes, addTrip}) => {
 
     const transportNodes = modes.map(mode => {
         return <TransportMode
@@ -11,6 +12,13 @@ const TripForm = ({modes, addTrip}) => {
             mode={mode}
             />
     })
+    const employeeNodes = employees.map(employee => {
+        return <Employee
+            key={employee._id}
+            employee={employee}
+            />
+    })
+
 
     const [formData, setFormData] = useState({
         name: "",
@@ -38,22 +46,23 @@ const TripForm = ({modes, addTrip}) => {
             trips: "",
         });
     }
-
+    
     return (
         <form onSubmit={onSubmit} id="trip-form" >
             <h2>Record a Trip</h2>
             <div className="formWrap">
-                <label htmlFor="name">Name</label>
-                <input 
+                <label htmlFor="employees">Name</label><br></br>
+                <select
                     onChange={onChange} 
-                    type="text" 
-                    id="name" 
-                    name="name"
-                    value={formData.name} 
-                    />
+                    id="employees" 
+                    name="employees">
+                    Employees
+                    {employeeNodes}
+                    </select>
             </div>
             <div className="formWrap">
-                <label htmlFor="modes">Mode of Transport</label>
+
+                <label htmlFor="modes">Mode of Transport</label><br/>
                 <select 
                 onChange={onChange} 
                 id="modes" 
@@ -63,7 +72,7 @@ const TripForm = ({modes, addTrip}) => {
                 </select>
             </div>
             <div className="formWrap">
-                <label htmlFor="distance">Kilometres (km)</label>
+                <label htmlFor="distance">Kilometres (km)</label><br/>
                 <input 
                     onChange={onChange} 
                     type="number" 
@@ -73,7 +82,7 @@ const TripForm = ({modes, addTrip}) => {
                     />
             </div>
             <div className="formWrap">
-                <label htmlFor="trips">Trips per week</label>
+                <label htmlFor="trips">Trips per week</label><br/>
                 <input 
                     onChange={onChange} 
                     type="number" 
@@ -82,7 +91,7 @@ const TripForm = ({modes, addTrip}) => {
                     value={formData.trips}
                     />
             </div>
-            <input type="submit" value="Log this estimate" id="save"/>
+            {/* <input type="submit" value="Log this estimate" id="save"/> */}
     </form>
 
     )

@@ -17,12 +17,21 @@ function App() {
       .then(EmployeeService.getEmployees()
         .then(employees => setEmployees(employees)))
   }, [])
+
+  const addTrip = (trip) => {
+    setEmissionsTrip([...emissionsTrip, trip]);
+  }
+
+  const removeTrip = (id) => {
+    const tripsToKeep = emmisionsTrip.filter(trip => trip._id !== id)
+    setEmissionsTrip(tripsToKeep);
+  }
   
   return (
     <Router>
       <NavBar />
       <Routes>
-      <Route path='/'element={<Home modes={modes} employees={employees}/>} />
+      <Route path='/'element={<Home modes={modes} employees={employees} addTrip = {addTrip} removeTrip ={removeTrip}/>} />
       <Route path='/triptable' element={<TripTable />} />
       </Routes>
     </Router>

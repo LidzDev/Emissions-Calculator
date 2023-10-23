@@ -47,7 +47,8 @@ const createRouter = function(collection) {
         collection
         .insertOne(newData)
         .then((result) => {
-            res.json(result._id)
+            console.log({result})
+            res.json(newData)
         })
         .catch((err) => {
             console.error(err)

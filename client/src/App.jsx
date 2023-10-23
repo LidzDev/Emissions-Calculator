@@ -1,42 +1,64 @@
-import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import TransportService from './services/TransportService'
-import EmployeeService from './services/EmployeeService'
-import Home from './components/Home'
-import NavBar from './components/NavBar'
-import TripTable from './components/TripTable'
-import './App.css'
+import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import TransportService from "./services/TransportService";
+import EmployeeService from "./services/EmployeeService";
+import Home from "./components/Home";
+import NavBar from "./components/NavBar";
+import TripTable from "./components/TripTable";
+import { postTrip, getTrips } from "./services/TripService";
+import "./App.css";
 
 function App() {
-  const [modes, setModes] = useState([])
-  const [employees, setEmployees] = useState([])
-  const [emissionsTrip, setEmissionsTrip] = useState([])
+  const [modes, setModes] = useState([]);
+  const [employees, setEmployees] = useState([]);
+  const [emissionsTrip, setEmissionsTrip] = useState([]);
 
   useEffect(() => {
+    //two seperate useeffects
     TransportService.getModesOfTransport()
-      .then(modes => setModes(modes))
-      .then(EmployeeService.getEmployees()
-        .then(employees => setEmployees(employees)))
-  }, [])
+      .then((modes) => setModes(modes))
+      .then(
+        EmployeeService.getEmployees().then((employees) =>
+          setEmployees(employees)
+        )
+      );
+  }, []);
+
+  useEffect(() => {
+    getTrips().then((trips) => setEmissionsTrip(trips));
+  }, []);
 
   const addTrip = (trip) => {
     setEmissionsTrip([...emissionsTrip, trip]);
-  }
+  };
 
   const removeTrip = (id) => {
-    const tripsToKeep = emmisionsTrip.filter(trip => trip._id !== id)
+    const tripsToKeep = emmisionsTrip.filter((trip) => trip._id !== id);
     setEmissionsTrip(tripsToKeep);
-  }
-  
+  };
+
   return (
     <Router>
       <NavBar />
       <Routes>
-      <Route path='/'element={<Home modes={modes} employees={employees} addTrip = {addTrip} removeTrip ={removeTrip}/>} />
-      <Route path='/triptable' element={<TripTable />} />
+        <Route
+          path="/"
+          element={
+            <Home
+              modes={modes}
+              employees={employees}
+              addTrip={addTrip}
+              removeTrip={removeTrip}
+            />
+          }
+        />
+        <Route
+          path="/triptable"
+          element={<TripTable trips={emissionsTrip} />}
+        />
       </Routes>
     </Router>
-  )
+  );
 }
 
 export default App;

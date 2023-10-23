@@ -1,0 +1,31 @@
+section {
+    margin: 0px 50px;
+}
+p {
+    text-align: center;
+
+}
+table {
+    background-color: #edefff;
+}
+
+th {
+    background-color: #6b5bff;
+}
+
+
+button.update-btn {
+    background-color: #1b998b;
+    padding: 5px 15px;
+    border-radius: 10px; 
+    border-color: #1b998b;
+    margin: 5px;
+}
+
+button.delete-btn {
+    background-color: #f14668;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border-color:  #f14668;
+
+}

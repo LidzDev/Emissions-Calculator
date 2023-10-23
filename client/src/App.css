@@ -1,7 +1,7 @@
 body {
     color: #130e3d;
     font-family: 'Inter', sans-serif;
-    
+   
 }
 
 
@@ -17,7 +17,7 @@ body {
 }
 
 .calc-form {
-    background-color: #6b5bff;
+    background-color:  #edefff;
     padding: 20px;
     margin: 20px;
     width: 350px;
@@ -42,6 +42,15 @@ button {
     /* font-size: 60px; */
     font-weight: bold;
     color: #6b5bff;
+}
+
+input#save {
+    font-family: 'Inter', sans-serif;
+    background-color: #130e3d;
+    color: #fff;
+    padding: 5px 15px;
+    margin: 10px 0px;
+    border-radius: 10px;
 }
 
 button.log-estimate-btn {

@@ -1,21 +1,42 @@
 body {
     color: #130e3d;
+    background-color: #edefff;
+    font-family: 'Inter', sans-serif;
+    
 }
 
 .flex-box {
     display: flex;
     flex-direction: row; /*lines the flex boxes up in a row initially*/
-    flex-wrap: wrap; /* moves boxes onto multiple lines*/
+    /* flex-wrap: wrap; moves boxes onto multiple lines */
     justify-content: center;
     align-items: stretch; /*might remove this- it should stretch the boxes so that they fill the container*/
-    
+    padding: 20px;
+    /* margin: 20px 50px; */
 }
 
 .calc-form {
     background-color: #6b5bff;
+    padding: 20px;
+    margin: 20px;
+    max-width: 50vw;
+    min-width: 40vw;
 
 }
 
 .form-output {
     background-color: #1b998b;
+    padding: 20px;
+    margin: 20px;
+    max-width: 50vw;
+    min-width: 40vw;
+    text-align: center;
 }
+
+button {
+    font-family: 'Inter', sans-serif;
+}
+/* 
+.trip-emissions-total {
+    color: pink;
+} */

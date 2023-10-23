@@ -2,7 +2,7 @@
 const TransportMode = ({mode}) => {
     return (
         <>
-        <option value={mode.mode}>{mode.mode} - {mode.emissions}</option> 
+        <option value={mode.tid}>{mode.mode} - {mode.emissions}</option> 
         </>
     )
 }

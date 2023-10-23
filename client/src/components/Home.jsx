@@ -2,7 +2,7 @@ import MainTitle from "./MainTitle"
 import TripForm from "./TripForm";
 import TripEmissionsTotal from "./TripEmissionsTotal";
 
-const Home = ({ modes, employees }) => {
+const Home = ({ modes, employees, addTrip }) => {
 
     const title = "CO2 Calculator"
     const intro = "Calculate your carbon footprint"
@@ -12,7 +12,7 @@ const Home = ({ modes, employees }) => {
             <MainTitle title={title} intro={intro} />
             <div className="flex-box">
                 <div className="calc-form">
-                    <TripForm modes={modes} employees={employees}/>
+                    <TripForm modes={modes} employees={employees} addTrip={addTrip}/>
                     {/* <Routes> */}
                     {/* <Route path="/" element={<TripForm modes={modes} />} /> */}
                     {/* <Route path="/triptable" element={<TripTable mode={mode} />} /> */}

@@ -10,6 +10,7 @@ import './App.css'
 function App() {
   const [modes, setModes] = useState([])
   const [employees, setEmployees] = useState([])
+  const [emissionsTrip, setEmissionsTrip] = useState([])
 
   useEffect(() => {
     TransportService.getModesOfTransport()

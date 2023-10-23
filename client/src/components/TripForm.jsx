@@ -21,8 +21,8 @@ const TripForm = ({modes, employees, addTrip}) => {
 
 
     const [formData, setFormData] = useState({
-        name: "",
-        modes: "",
+        sid: "",
+        tid: "",
         distance: "",
         trips: "",
     })
@@ -40,8 +40,8 @@ const TripForm = ({modes, employees, addTrip}) => {
             addTrip(data);
         })
         setFormData({
-            name: "",
-            modes: "",
+            sid: "",
+            tid: "",
             distance: "",
             trips: "",
         });
@@ -51,22 +51,22 @@ const TripForm = ({modes, employees, addTrip}) => {
         <form onSubmit={onSubmit} id="trip-form" >
             <h2>Record a Trip</h2>
             <div className="formWrap">
-                <label htmlFor="employees">Name</label><br></br>
+                <label htmlFor="employee">Name</label><br></br>
                 <select
                     onChange={onChange} 
-                    id="employees" 
-                    name="employees">
+                    id="employee" 
+                    name="sid">
                     Employees
                     {employeeNodes}
                     </select>
             </div>
             <div className="formWrap">
 
-                <label htmlFor="modes">Mode of Transport</label><br/>
+                <label htmlFor="mode">Mode of Transport</label><br/>
                 <select 
                 onChange={onChange} 
-                id="modes" 
-                name="modes">
+                id="mode" 
+                name="tid">
                 Modes of Transport
                 {transportNodes}
                 </select>
@@ -91,7 +91,7 @@ const TripForm = ({modes, employees, addTrip}) => {
                     value={formData.trips}
                     />
             </div>
-            {/* <input type="submit" value="Log this estimate" id="save"/> */}
+            <input type="submit" value="Log this estimate" id="save"/>
     </form>
 
     )

@@ -24,6 +24,18 @@ function App() {
       <TripForm
         modes={modes}
       />
+      <div class="flex-box">
+        <div class="calc-form">
+          <form><p>form goes here</p></form>
+        </div>
+        <div class="form-output">
+        <p>Estimated CO2 emissions: </p>
+            <p class="trip-emissions-total">50.93kg</p>
+            <button>Log emissions</button>
+            <p>View total estimated CO2 emissions</p>
+
+        </div>
+      </div>
     </>
   )
 }

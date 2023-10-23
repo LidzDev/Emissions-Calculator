@@ -39,7 +39,6 @@ button {
 .trip-emissions-total {
     font-family: 'Inter', sans-serif;
     font-size: 350%;
-    flex: 50%;
     /* font-size: 60px; */
     font-weight: bold;
     color: #6b5bff;

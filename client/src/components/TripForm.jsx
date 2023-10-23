@@ -23,7 +23,7 @@ const TripForm = ({modes, employees}) => {
         <form  id="trip-form" >
             {/* <h2>Record a Trip</h2> */}
             <div className="formWrap">
-                <label htmlFor="employees">Name</label>
+                <label htmlFor="employees">Name</label><br></br>
                 <select
                     // onChange={onChange} 
                     id="employees" 
@@ -33,6 +33,7 @@ const TripForm = ({modes, employees}) => {
                     </select>
             </div>
             <div className="formWrap">
+
                 <label htmlFor="modes">Mode of Transport</label><br/>
                 <select 
                 // onChange={onChange} 
@@ -62,7 +63,7 @@ const TripForm = ({modes, employees}) => {
                     // value={formData.trips}
                     />
             </div>
-            <input type="submit" value="Log this estimate" id="save"/>
+            {/* <input type="submit" value="Log this estimate" id="save"/> */}
     </form>
 
     )

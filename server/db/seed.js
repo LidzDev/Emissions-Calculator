@@ -1,4 +1,5 @@
-db.dropDatabase();
+use emissions
+db.dropDatabase()
 
 db.transport.insertMany([
     {

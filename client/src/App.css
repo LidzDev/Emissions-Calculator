@@ -1,17 +1,18 @@
 body {
     color: #130e3d;
-    background-color: #edefff;
     font-family: 'Inter', sans-serif;
     
 }
 
+
 .flex-box {
     display: flex;
     flex-direction: row; /*lines the flex boxes up in a row initially*/
-    /* flex-wrap: wrap; moves boxes onto multiple lines */
+    flex-wrap: wrap; /*moves boxes onto multiple lines*/
     justify-content: center;
     align-items: stretch; /*might remove this- it should stretch the boxes so that they fill the container*/
     padding: 20px;
+    margin: 10px 50px;
     /* margin: 20px 50px; */
 }
 
@@ -19,24 +20,39 @@ body {
     background-color: #6b5bff;
     padding: 20px;
     margin: 20px;
-    max-width: 50vw;
-    min-width: 40vw;
-
+    width: 350px;
 }
 
 .form-output {
-    background-color: #1b998b;
+    /* background-color: #1b998b; */
+    background-color: #edefff;
     padding: 20px;
     margin: 20px;
-    max-width: 50vw;
-    min-width: 40vw;
+    width: 350px;
     text-align: center;
 }
 
 button {
     font-family: 'Inter', sans-serif;
 }
-/* 
+
 .trip-emissions-total {
-    color: pink;
-} */
+    font-family: 'Inter', sans-serif;
+    font-size: 350%;
+    flex: 50%;
+    /* font-size: 60px; */
+    font-weight: bold;
+    color: #6b5bff;
+}
+
+button.log-estimate-btn {
+    background-color: #130e3d;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+button.log-estimate-btn:active {
+    background-color: #1b998b;
+    border-color: #1b998b;
+}

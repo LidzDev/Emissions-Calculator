@@ -1,10 +1,17 @@
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import TransportMode from "./TransportMode"
 import { postTrip } from "../services/TripService"
 import Employee from "./Employee"
 
 const TripForm = ({modes, employees, addTrip}) => {
 
+    const [tripEmissions, setTripEmissions] = useState(0)
+    const [formData, setFormData] = useState({
+        sid: 0,
+        tid: 0,
+        distance: 0,
+        trips: 0
+    })
 
     const transportNodes = modes.map(mode => {
         return <TransportMode
@@ -19,19 +26,14 @@ const TripForm = ({modes, employees, addTrip}) => {
             />
     })
 
-
-    const [formData, setFormData] = useState({
-        sid: "",
-        tid: "",
-        distance: 0,
-        trips: 0
-    })
-
-
     const onChange = (e) =>{
         const newFormData = Object.assign({}, formData);
         newFormData[e.target.name] = parseInt(e.target.value);
         setFormData(newFormData);
+        const mode = modes.find(mode => mode.tid === newFormData.tid)
+        const transportEmission = mode.emissions
+        setTripEmissions(newFormData.distance * newFormData.trips * transportEmission)
+        console.log(tripEmissions)
     }
 
     const onSubmit = (e) =>{

@@ -6,14 +6,19 @@ import {getTrips} from './services/TripService'
 import Home from './components/Home'
 import NavBar from './components/NavBar'
 import TripTable from './components/TripTable'
+import TripService from './services/TripService'
 import './App.css'
 
 function App() {
   const [modes, setModes] = useState([])
   const [employees, setEmployees] = useState([])
-  const [emissionsTrip, setEmissionsTrip] = useState([])
+
+  // const [emissionsTrip, setEmissionsTrip] = useState([])
+  const [trip, setTrip] = useState([])
+  const [trips, setTrips] = useState([])
   const [totalEmissions, setTotalEmissions] = useState(0)
   // const [trip, setTrip] =  useState([])
+
 
   useEffect(() => {
     TransportService.getModesOfTransport()
@@ -35,14 +40,26 @@ function App() {
   })
 
   const addTrip = (trip) => {
-    setEmissionsTrip([...emissionsTrip, trip]);
+    setTrips([...trips, trip]);
   }
 
-  const removeTrip = (id) => {
-    const tripsToKeep = emissionsTrip.filter(trip => trip._id !== id)
-    setEmissionsTrip(tripsToKeep);
+
+  const deleteTrip = idToDelete => {
+    TripService.deleteTrip(idToDelete);
+    setTrip(trips.filter(trip => trip._id !== idToDelete))
+
   }
-  
+
+  const updateTrip = idToUpdate => {
+    TripService.updateTrip(idToUpdate)
+
+    const updatedTripIndex = trips.findIndex(trip => trip._id === updatedTrip._id);
+    const updatedTrips = [...trips];
+    updatedTrips[updatedTripIndex] = updatedTrip;
+    setTrips(updatedTrips);
+  }
+
+
   return (
     <Router>
       <NavBar />

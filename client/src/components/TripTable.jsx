@@ -35,13 +35,14 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
             handleDeleteTrip={handleDeleteTrip}
         />
     })
-
+    
     return (
         <section>
             <p>Your company's total emissions</p>
             <p className="co-total-emissions">{totalEmissions}</p>
             <p>of CO2 produced through travel.</p>
             <table>
+                <th></th>
                 <tr>
                     <th>Name</th>
                     <th>Mode of Transport</th>
@@ -56,4 +57,5 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
         </section>
     );
 }
+
 export default TripTable

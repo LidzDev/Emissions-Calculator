@@ -13,7 +13,7 @@ const TripTable = (tripData) => {
         <td>*trips per week*</td>
         <td>{trip.emissions ? trip.emissions : "NA"}</td>
         <td>
-          <button className="update-btn">Update</button>
+          <button className="update-btn">Update</button> 
         </td>
         <td>
           <button className="delete-btn">Delete</button>
@@ -24,9 +24,13 @@ const TripTable = (tripData) => {
 
   return (
     <section>
-      <p>Your company's total emissions</p>
-      <p>*total emissions go here</p>
-      <p>of CO2 produced through travel.</p>
+      <div className="total-emissions-header">
+        <p>Your company's total emissions:</p>
+        <p className="co-total-emissions">*3650 kg*</p>
+        <p>of CO2 produced through travel</p>
+      </div>
+      <br/>
+      <h2>See a breakdown of your carbon footprint below </h2>
 
       <table>
         <tr>
@@ -35,11 +39,15 @@ const TripTable = (tripData) => {
           <th>Distance</th>
           <th>Trips per Week</th>
           <th>Emissions</th>
-          <th>*update</th>
-          <th>*delete</th>
+          <th>{/*update*/}</th>
+          <th>{/*delete*/}</th>
         </tr>
         {tripItems}
       </table>
+      <br/>
+
+      <h2>Let's break things down a bit more...</h2>
+      <p>*charts go here*</p>
     </section>
   );
 };

@@ -14,12 +14,11 @@ function App() {
   const [emissionsTrip, setEmissionsTrip] = useState([]);
 
   useEffect(() => {
-    //two seperate useeffects
+    //two seperate useEffects
     TransportService.getModesOfTransport()
       .then((modes) => setModes(modes))
-      .then(
-        EmployeeService.getEmployees().then((employees) =>
-          setEmployees(employees)
+      .then(EmployeeService.getEmployees()
+      .then((employees) => setEmployees(employees)
         )
       );
   }, []);
@@ -33,7 +32,7 @@ function App() {
   };
 
   const removeTrip = (id) => {
-    const tripsToKeep = emmisionsTrip.filter((trip) => trip._id !== id);
+    const tripsToKeep = emisionsTrip.filter((trip) => trip._id !== id);
     setEmissionsTrip(tripsToKeep);
   };
 

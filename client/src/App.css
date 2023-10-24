@@ -4,7 +4,6 @@ body {
    
 }
 
-
 .flex-box {
     display: flex;
     flex-direction: row; /*lines the flex boxes up in a row initially*/
@@ -32,8 +31,23 @@ body {
     text-align: center;
 }
 
+#trip-form > h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+div.formWrap {
+    padding: 5px;
+
+}
+
 button {
     font-family: 'Inter', sans-serif;
+}
+
+#save:active {
+    background-color: #1b998b;
+    border-color: #1b998b;
 }
 
 .trip-emissions-total {
@@ -42,6 +56,7 @@ button {
     /* font-size: 60px; */
     font-weight: bold;
     color: #6b5bff;
+    margin: 15px;
 }
 
 input#save {

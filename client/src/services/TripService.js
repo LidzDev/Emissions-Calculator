@@ -18,6 +18,6 @@ export const postTrip = (payload) => {
 
 export const deleteTrip = (id) => {
   return fetch(baseURL + id, {
-    method: "DELETE",
+    method: "DELETE"
   });
 };

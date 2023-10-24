@@ -1,18 +1,46 @@
+
 section {
     margin: 0px 50px;
+    color: #130e3d;
+    font-family: 'Inter', sans-serif;
 }
 p {
     text-align: center;
 
 }
 table {
-    background-color: #edefff;
+    border-collapse: collapse;
+    margin-left: auto; /*centers the table*/
+    margin-right: auto; /*centers the table*/
+
+}
+
+table, tr{
+    border: 1px solid #edefff;
+}
+
+p.co-total-emissions {
+    color: #6b5bff;
+    font-size: 58px;
+    font-weight: bold;
+    margin: 10px;
+
+}
+
+h2 {
+    text-align: center;
+    color: #6b5bff;
 }
 
 th {
-    background-color: #6b5bff;
+    background-color: #edefff;
+    padding: 10px;
+
 }
 
+td {
+    padding: 0px 10px;
+}
 
 button.update-btn {
     background-color: #1b998b;
@@ -28,4 +56,9 @@ button.delete-btn {
     border-radius: 10px;
     border-color:  #f14668;
 
+}
+
+.total-emissions-header {
+    font-weight: bold;
+    font-size: 18px;
 }

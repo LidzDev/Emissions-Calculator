@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import TransportService from './services/TransportService'
 import EmployeeService from './services/EmployeeService'
+import {getTrips} from './services/TripService'
 import Home from './components/Home'
 import NavBar from './components/NavBar'
 import TripTable from './components/TripTable'
@@ -16,6 +17,7 @@ function App() {
   const [trip, setTrip] = useState([])
   const [trips, setTrips] = useState([])
   const [totalEmissions, setTotalEmissions] = useState(0)
+  // const [trip, setTrip] =  useState([])
 
 
   useEffect(() => {
@@ -23,8 +25,8 @@ function App() {
       .then(modes => setModes(modes))
       .then(EmployeeService.getEmployees()
         .then(employees => setEmployees(employees)))
-      .then(TripService.getTrips()
-        .then(trips => setTrips(trips)))
+      .then(getTrips()
+        .then(emissionsTrip => setEmissionsTrip(emissionsTrip)))
   }, [])
 
   useEffect(() => {
@@ -62,9 +64,8 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
-      <Route path='/'element={<Home modes={modes} employees={employees} addTrip = {addTrip}/>} />
-      <Route path='/triptable' element={<TripTable trip={trip} deleteTrip={deleteTrip} updateTrip={updateTrip} totalEmissions={totalEmissions} />} />
-
+      <Route path='/'element={<Home modes={modes} employees={employees} addTrip = {addTrip} removeTrip ={removeTrip}/>} />
+      <Route path='/triptable' element={<TripTable totalEmissions={totalEmissions} removeTrip={removeTrip} trips={emissionsTrip} modes={modes} employees={employees}/>} />
       </Routes>
     </Router>
   )

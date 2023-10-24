@@ -40,8 +40,8 @@ const TripForm = ({modes, employees, addTrip}) => {
             addTrip(data);
         })
         setFormData({
-            sid: "",
-            tid: "",
+            sid: 0,
+            tid: 0,
             distance: 0,
             trips: 0
         });

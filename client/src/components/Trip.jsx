@@ -9,7 +9,7 @@ const Trip = ({trip, staffName, transportMode, handleDeleteTrip}) => {
             <td>{trip.distance}</td>
             <td>{trip.trips}</td>
             <td>{trip.emissions}</td>
-            <td><button className="update-btn">Update</button></td>
+            {/* <td><button className="update-btn">Update</button></td> */}
             <td><button onClick={handleDeleteTrip} className="delete-btn">Delete</button></td>
         </tr>
     );

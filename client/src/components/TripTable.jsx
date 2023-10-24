@@ -39,7 +39,7 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
     return (
         <section>
             <p>Your company's total emissions</p>
-            <p className="co-total-emissions">{totalEmissions}</p>
+            <p className="co-total-emissions">{totalEmissions} g</p>
             <p>of CO2 produced through travel.</p>
             <table>
                 <tr>
@@ -48,7 +48,7 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
                     <th>Distance</th>
                     <th>Trips per Week</th>
                     <th>Emissions</th>
-                    <th>*update</th>
+                    {/* <th>*update</th> */}
                     <th>*delete</th>
                 </tr>
                 {tripItems}

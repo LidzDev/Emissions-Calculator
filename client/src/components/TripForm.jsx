@@ -23,14 +23,14 @@ const TripForm = ({modes, employees, addTrip}) => {
     const [formData, setFormData] = useState({
         sid: "",
         tid: "",
-        distance: "",
-        trips: "",
+        distance: 0,
+        trips: 0
     })
 
 
     const onChange = (e) =>{
         const newFormData = Object.assign({}, formData);
-        newFormData[e.target.name] = e.target.value;
+        newFormData[e.target.name] = parseInt(e.target.value);
         setFormData(newFormData);
     }
 
@@ -42,8 +42,8 @@ const TripForm = ({modes, employees, addTrip}) => {
         setFormData({
             sid: "",
             tid: "",
-            distance: "",
-            trips: "",
+            distance: 0,
+            trips: 0
         });
     }
     

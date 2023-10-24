@@ -1,17 +1,24 @@
-// import TransportMode from "./TransportMode"
+import TransportMode from "./TransportMode"
+import TripService from "../services/TripService";
 
-const TripTable = ({mode, deleteTrip, removeTrip}) => {
-const [modeTrips, setModeTrips] = useState([])
-    
-    const handleDelete = () => {
-        deleteTrip(trip._id).then(() => {
-            removeTrip(trip._id)
-        })
 
-    const removeTrip = (id) => {
-        const tripToKeep = modeTrips.filter(trip => trip._id !== id)
-        setModeTrips(tripToKeep)
-        }
+
+const TripTable = ({trip, deleteTrip, updateTrip}) => {
+
+    const handleUpdateTrip =() => {
+        updateTrip({
+        _id: trip._id,
+        sid: trip.sid,
+        tid: trip.tid,
+        distance: trip.distance,
+        trips: trip.trips
+    })
+    }
+    const handleDeleteTrip = () => {
+        deleteTrip({_id: trip._id});
+    }
+
+
 
     return (
         <section>
@@ -20,21 +27,22 @@ const [modeTrips, setModeTrips] = useState([])
             <p>of CO2 produced through travel.</p>
 
             <table>
+                <th></th>
                 <tr>
                     <th>Name</th>
                     <th>Mode of Transport</th>
                     <th>Distance</th>
-                    <th>{mode.emissions}</th>
+                    {/* <th>{mode.emissions}</th> */}
                     <th>*update buttons below</th>
                     <th>*delete buttons below</th>
                 </tr> 
                 <tr>
                     <td>*name*</td>
-                    <td>{mode.mode}</td>
+                    {/* <td>{mode.mode}</td> */}
                     <td>*distance*</td>
-                    <td>{mode.emissions}</td>
-                    <td><button>Update</button></td>
-                    <td><button onClick={handleDelete}>Delete</button></td>
+                    {/* <td>{mode.emissions}</td> */}
+                    <td><button onClick={handleUpdateTrip}>Update</button></td>
+                    <td><button onClick={handleDeleteTrip}>Delete</button></td>
                     
     
 
@@ -43,6 +51,6 @@ const [modeTrips, setModeTrips] = useState([])
         </section>
         // <h1>I'm the TripTable</h1>
     )}
-    }
+    
 
 export default TripTable

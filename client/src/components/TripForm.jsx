@@ -1,6 +1,6 @@
 import {useState} from "react"
 import TransportMode from "./TransportMode"
-import { postTrip } from "../services/TripService"
+import TripService from "../services/TripService"
 import Employee from "./Employee"
 
 const TripForm = ({modes, employees, addTrip}) => {
@@ -46,6 +46,8 @@ const TripForm = ({modes, employees, addTrip}) => {
             trips: "",
         });
     }
+
+    
     
     return (
         <form onSubmit={onSubmit} id="trip-form" >

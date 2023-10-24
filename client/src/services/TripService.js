@@ -1,26 +1,44 @@
 const baseURL = 'http://localhost:9000/api/trips/'
 
-export const getTrips = () => {
+
+const TripService = {
+
+getTrips () {
     return fetch(baseURL)
         .then(res => res.json())
-}
+},
 
-export const getOneTrip = (id) => {
-    return fetch(baseURL + id)
+getOneTrip(id) {
+    return fetch(baseURL + id) 
         .then(res => res.json())
-}
+    },
 
-export const postTrip = (payload) => {
+postTrip(payload) {
     return fetch(baseURL, {
         method: 'POST',
         body: JSON.stringify(payload),
         headers: { 'Content-Type': 'application/json' }
     })
     .then(res => res.json())
-}
+},
 
-export const deleteTrip = (id) => {
+deleteTrip(id) {
     return fetch(baseURL + id, {
         method: 'DELETE'
     })
+},
+
+updateTrip(trip) {
+    return fetch(baseURL + trip._id, {
+    method: 'PUT',
+    body: JSON.stringify(booking),
+    headers: {
+    'Content-Type': 'application/json'
+    }
+    })
+    .then(res => res.json());
+},
+
 }
+
+export default TripService

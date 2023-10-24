@@ -11,6 +11,7 @@ function App() {
   const [modes, setModes] = useState([])
   const [employees, setEmployees] = useState([])
   const [emissionsTrip, setEmissionsTrip] = useState([])
+  const [totalEmissions, setTotalEmissions] = useState(0)
 
   useEffect(() => {
     TransportService.getModesOfTransport()
@@ -19,12 +20,22 @@ function App() {
         .then(employees => setEmployees(employees)))
   }, [])
 
+  useEffect(() => {
+    fetch('http://localhost:9000/api/trips/total-emissions')
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data)
+      setTotalEmissions(data.totalEmissions)
+    })
+    .catch((error) => console.error('Error fetching total emissions:', error));
+  })
+
   const addTrip = (trip) => {
     setEmissionsTrip([...emissionsTrip, trip]);
   }
 
   const removeTrip = (id) => {
-    const tripsToKeep = emmisionsTrip.filter(trip => trip._id !== id)
+    const tripsToKeep = emissionsTrip.filter(trip => trip._id !== id)
     setEmissionsTrip(tripsToKeep);
   }
   
@@ -33,7 +44,7 @@ function App() {
       <NavBar />
       <Routes>
       <Route path='/'element={<Home modes={modes} employees={employees} addTrip = {addTrip} removeTrip ={removeTrip}/>} />
-      <Route path='/triptable' element={<TripTable />} />
+      <Route path='/triptable' element={<TripTable totalEmissions={totalEmissions}/>} />
       </Routes>
     </Router>
   )

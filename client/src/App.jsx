@@ -11,9 +11,12 @@ import './App.css'
 function App() {
   const [modes, setModes] = useState([])
   const [employees, setEmployees] = useState([])
+
   // const [emissionsTrip, setEmissionsTrip] = useState([])
   const [trip, setTrip] = useState([])
   const [trips, setTrips] = useState([])
+  const [totalEmissions, setTotalEmissions] = useState(0)
+
 
   useEffect(() => {
     TransportService.getModesOfTransport()
@@ -24,14 +27,24 @@ function App() {
         .then(trips => setTrips(trips)))
   }, [])
 
+  useEffect(() => {
+    fetch('http://localhost:9000/api/trips/total-emissions')
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data)
+      setTotalEmissions(data.totalEmissions)
+    })
+    .catch((error) => console.error('Error fetching total emissions:', error));
+  })
+
   const addTrip = (trip) => {
     setTrips([...trips, trip]);
   }
 
+
   const deleteTrip = idToDelete => {
     TripService.deleteTrip(idToDelete);
     setTrip(trips.filter(trip => trip._id !== idToDelete))
-
 
   }
 
@@ -50,7 +63,8 @@ function App() {
       <NavBar />
       <Routes>
       <Route path='/'element={<Home modes={modes} employees={employees} addTrip = {addTrip}/>} />
-      <Route path='/triptable' element={<TripTable trip={trip} deleteTrip={deleteTrip} updateTrip={updateTrip} />} />
+      <Route path='/triptable' element={<TripTable trip={trip} deleteTrip={deleteTrip} updateTrip={updateTrip} totalEmissions={totalEmissions} />} />
+
       </Routes>
     </Router>
   )

@@ -32,6 +32,7 @@ const TripTable = (tripData) => {
       <br/>
       <h2>See a breakdown of your carbon footprint below </h2>
 
+<div className="table-div">
       <table>
         <tr>
           <th>Name</th>
@@ -44,6 +45,7 @@ const TripTable = (tripData) => {
         </tr>
         {tripItems}
       </table>
+</div>
       <br/>
 
       <h2>Let's break things down a bit more...</h2>

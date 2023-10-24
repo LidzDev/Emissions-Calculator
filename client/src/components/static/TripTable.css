@@ -12,7 +12,11 @@ table {
     border-collapse: collapse;
     margin-left: auto; /*centers the table*/
     margin-right: auto; /*centers the table*/
+    
+}
 
+div.table-div{
+    overflow-x: auto;
 }
 
 table, tr{

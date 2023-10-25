@@ -1,10 +1,17 @@
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import TransportMode from "./TransportMode"
 import { postTrip } from "../services/TripService"
 import Employee from "./Employee"
 
-const TripForm = ({modes, employees, addTrip}) => {
+const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
 
+    const [tripEmissions, setTripEmissions] = useState(0)
+    const [formData, setFormData] = useState({
+        sid: 0,
+        tid: 0,
+        distance: 0,
+        trips: 0
+    })
 
     const transportNodes = modes.map(mode => {
         return <TransportMode
@@ -19,19 +26,16 @@ const TripForm = ({modes, employees, addTrip}) => {
             />
     })
 
-
-    const [formData, setFormData] = useState({
-        sid: "",
-        tid: "",
-        distance: "",
-        trips: "",
-    })
-
-
     const onChange = (e) =>{
         const newFormData = Object.assign({}, formData);
-        newFormData[e.target.name] = e.target.value;
+        newFormData[e.target.name] = parseInt(e.target.value);
         setFormData(newFormData);
+        const mode = modes.find(mode => mode.tid === newFormData.tid)
+        const transportEmission = mode.emissions
+        const newTripEmissions = (newFormData.distance * newFormData.trips * transportEmission)
+        setTripEmissions(newTripEmissions)
+        updateTripEmissions(newTripEmissions)
+        console.log(tripEmissions)
     }
 
     const onSubmit = (e) =>{
@@ -40,10 +44,10 @@ const TripForm = ({modes, employees, addTrip}) => {
             addTrip(data);
         })
         setFormData({
-            sid: "",
-            tid: "",
-            distance: "",
-            trips: "",
+            sid: 0,
+            tid: 0,
+            distance: 0,
+            trips: 0
         });
     }
     
@@ -57,6 +61,7 @@ const TripForm = ({modes, employees, addTrip}) => {
                     id="employee" 
                     name="sid">
                     Employees
+                    <option value="" selected disabled>--Select employee--</option>                   
                     {employeeNodes}
                     </select>
             </div>
@@ -68,6 +73,7 @@ const TripForm = ({modes, employees, addTrip}) => {
                 id="mode" 
                 name="tid">
                 Modes of Transport
+                <option value="" selected disabled>--Select transport--</option>
                 {transportNodes}
                 </select>
             </div>

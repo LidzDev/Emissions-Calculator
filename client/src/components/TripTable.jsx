@@ -1,6 +1,7 @@
 import Trip from "./Trip"
 import { deleteTrip } from "../services/TripService"
 import "./static/TripTable.css";
+import PieChart from "./PieChart";
 
 const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, employees }) => {
 
@@ -38,31 +39,59 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
 
     const emissionsKg = (totalEmissions / 1000)
 
+    const employeeEmissions = {};
+
+    trips.forEach((trip) => {
+        const staff = employees.find((employee) => employee.sid === trip.sid);
+        const staffName = staff.name;
+        const emissionsKg = trip.emissions / 1000;
+
+        if (!employeeEmissions[staffName]) {
+            employeeEmissions[staffName] = emissionsKg;
+        } 
+        else {
+            employeeEmissions[staffName] += emissionsKg;
+        }
+    });
+
+    console.log("Employee Emissions:", employeeEmissions)
+
+    const pieChartData = Object.entries(employeeEmissions).map(([name, emissions]) => ({
+        name: name,
+        y: emissions,
+    }));
+    
+    
+    
+
     return (
-        <section>
-          <div className="total-emissions-header">
-            <p>Your company's total emissions</p>
-            <p className="co-total-emissions">{emissionsKg} kg</p>
-            <p>of CO2 produced through travel.</p>       
-          </div>
-          <br/>
-          <h2>See a breakdown of your carbon footprint below </h2>
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Mode of Transport</th>
-                    <th>Distance</th>
-                    <th>Trips per Week</th>
-                    <th>Emissions(kg)</th>
-                    {/* <th>*update</th> */}
-                    <th>*delete</th>
-                </tr>
-                {tripItems}
-            </table>
+        <>
+            <section>
+            <div className="total-emissions-header">
+                <p>Your company's total emissions</p>
+                <p className="co-total-emissions">{emissionsKg} kg</p>
+                <p>of CO2 produced through travel.</p>       
+            </div>
             <br/>
-            <h2>Let's break things down a bit more...</h2>
-            <p>*charts go here*</p>
-        </section>
+            <h2>See a breakdown of your carbon footprint below </h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Mode of Transport</th>
+                        <th>Distance</th>
+                        <th>Trips per Week</th>
+                        <th>Emissions(kg)</th>
+                        {/* <th>*update</th> */}
+                        <th>*delete</th>
+                    </tr>
+                    {tripItems}
+                </table>
+                <br/>
+                <h2>Let's break things down a bit more...</h2>
+            </section>
+            <PieChart pieChartData={pieChartData} />
+
+        </>
     );
 }
 export default TripTable

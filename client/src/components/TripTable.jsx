@@ -3,7 +3,7 @@ import { deleteTrip } from "../services/TripService"
 import "./static/TripTable.css";
 import PieChart from "./PieChart";
 
-const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, employees }) => {
+const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, employees, tripEmissions, updateTripEmissions }) => {
 
     const handleUpdateTrip = () => {
         updateTrip({
@@ -22,6 +22,8 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
         const mode = modes.find(mode => mode.tid === trip.tid)
         const transportMode = mode.mode
         const emissions = mode.emissions
+        const newTripEmissions = (trip.distance * trip.trips * emissions)
+        // console.log("new trip", newTripEmissions)
 
         const handleDeleteTrip = () => {
             deleteTrip(trip._id).then(()=>{
@@ -34,7 +36,7 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
             trip={trip}
             staffName={staffName}
             transportMode={transportMode}
-            emissions={emissions}
+            emissions={newTripEmissions}
             handleDeleteTrip={handleDeleteTrip}
         />
     })

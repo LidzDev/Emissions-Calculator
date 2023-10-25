@@ -13,6 +13,7 @@ function App() {
   const [employees, setEmployees] = useState([])
   const [emissionsTrip, setEmissionsTrip] = useState([])
   const [totalEmissions, setTotalEmissions] = useState(0)
+  const [tripEmissions, setTripEmissions] = useState(0)
 
 
   useEffect(() => {
@@ -45,12 +46,19 @@ function App() {
     setEmissionsTrip(tripsToKeep);
   };
 
+  const updateTripEmissions = (newTripEmissions) => {
+      setTripEmissions(newTripEmissions)
+  }
+
   return (
     <Router>
       <NavBar/>
       <Routes>
-      <Route path='/'element={<Home modes={modes} employees={employees} addTrip = {addTrip} removeTrip ={removeTrip}/>} />
-      <Route path='/triptable' element={<TripTable totalEmissions={totalEmissions} removeTrip={removeTrip} trips={emissionsTrip} modes={modes} employees={employees}/>} />
+
+      <Route path='/'element={<Home modes={modes} employees={employees} tripEmissions={tripEmissions} addTrip = {addTrip} removeTrip ={removeTrip} updateTripEmissions={updateTripEmissions}/>} />
+
+      <Route path='/triptable' element={<TripTable totalEmissions={totalEmissions} removeTrip={removeTrip} updateTripEmissions={updateTripEmissions} trips={emissionsTrip} modes={modes} employees={employees} tripEmissions={tripEmissions} />} />
+
       </Routes>
     </Router>
   );

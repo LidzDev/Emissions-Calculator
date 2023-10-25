@@ -1,8 +1,9 @@
-
 section {
     margin: 0px 50px;
     color: #130e3d;
     font-family: 'Inter', sans-serif;
+    margin-top: 60px;
+
 }
 p {
     text-align: center;
@@ -11,8 +12,9 @@ p {
 table {
     border-collapse: collapse;
     margin-left: auto; /*centers the table*/
-    margin-right: auto; /*centers the table*/
-    
+    margin-right: auto; /*centers the table */
+    /* overflow-x: auto; */
+
 }
 
 div.table-div{
@@ -43,16 +45,13 @@ th {
 }
 
 td {
-    padding: 0px 10px;
+    padding: 5px 10px;
 }
 
-button.update-btn {
-    background-color: #1b998b;
-    padding: 5px 15px;
-    border-radius: 10px; 
-    border-color: #1b998b;
-    margin: 5px;
-}
+/* tr:hover {
+    color: #6b5bff;
+
+} */
 
 button.delete-btn {
     background-color: #f14668;
@@ -62,8 +61,15 @@ button.delete-btn {
 
 }
 
-.total-emissions-header {
-    font-weight: bold;
+button.delete-btn:active {
+    background-color: #130E3D;
+    color: #f14668;
+    border-color: #130E3D;
+}
+
+.total-emissions-intro {
+    /* font-weight: bold; */
     font-size: 18px;
+    margin: 20px;
 
 }

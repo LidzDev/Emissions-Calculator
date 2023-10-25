@@ -3,8 +3,47 @@
    
 }
 
+div.formWrap {
+    padding: 5px 0px;;
+
+}
+
 #employee, #mode, #distance, #trips {
     font-family: 'Inter', sans-serif;
     width: -webkit-fill-available;
+    padding: 5px;
     margin: 2px 0px;
+    border: 1px solid black;
+    border-radius: 7px;
+    /* font-size: 14px; */
+}
+
+/* #employee, #mode {
+    font-size: 14px; 
+} */
+
+#distance, #trips {
+    font-size: 14px;
+}
+
+label {
+    font-size: 16px;
+}
+
+.save-btn {
+    text-align: center;
+}
+
+input#save {
+    font-family: 'Inter', sans-serif;
+    background-color: #130e3d;
+    color: #fff;
+    padding: 5px 15px;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+
+#save:active {
+    background-color: #1b998b;
+    border-color: #1b998b;
 }

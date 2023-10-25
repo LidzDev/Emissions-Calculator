@@ -68,19 +68,20 @@ const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
                 <select
                     onChange={onChange} 
                     id="employee" 
-                    name="sid">
+                    name="sid"
+                    required>
                     Employees
                     <option value="" selected disabled>--Select employee--</option>                   
                     {employeeNodes}
                     </select>
             </div>
             <div className="formWrap">
-
                 <label htmlFor="mode">Mode of Transport</label><br/>
                 <select 
                 onChange={onChange} 
                 id="mode" 
-                name="tid">
+                name="tid" 
+                required>
                 Modes of Transport
                 <option value="" selected disabled>--Select transport--</option>
                 {transportNodes}
@@ -108,7 +109,9 @@ const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
                     min="1"
                     />
             </div>
-            <input type="submit" value="Log this estimate" id="save"/>
+            <div className="save-btn">
+                <input type="submit" value="Log this estimate" id="save"/>
+            </div>
     </form>
 
     )

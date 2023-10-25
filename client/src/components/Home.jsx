@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import MainTitle from "./MainTitle"
 import TripForm from "./TripForm";
 import TripEmissionsTotal from "./TripEmissionsTotal";
@@ -7,18 +8,20 @@ const Home = ({ modes, employees, addTrip }) => {
     const title = "CO2 Calculator"
     const intro = "Calculate your carbon footprint"
 
+    const [tripEmissions, setTripEmissions] = useState(0)
+
+    const updateTripEmissions = (newTripEmissions) => {
+        setTripEmissions(newTripEmissions)
+    }
+
     return (
         <>
             <MainTitle title={title} intro={intro} />
             <div className="flex-box">
                 <div className="calc-form">
-                    <TripForm modes={modes} employees={employees} addTrip={addTrip}/>
-                    {/* <Routes> */}
-                    {/* <Route path="/" element={<TripForm modes={modes} />} /> */}
-                    {/* <Route path="/triptable" element={<TripTable mode={mode} />} /> */}
-                    {/* </Routes> */}
+                    <TripForm modes={modes} employees={employees} addTrip={addTrip} updateTripEmissions={updateTripEmissions}/>
                 </div>
-                <TripEmissionsTotal />
+                <TripEmissionsTotal tripEmissions={tripEmissions}/>
             </div>
         </>
     );

@@ -36,10 +36,12 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
         />
     })
 
+    const emissionsKg = (totalEmissions / 1000)
+
     return (
         <section>
             <p>Your company's total emissions</p>
-            <p className="co-total-emissions">{totalEmissions} g</p>
+            <p className="co-total-emissions">{emissionsKg} kg</p>
             <p>of CO2 produced through travel.</p>
             <table>
                 <tr>
@@ -47,7 +49,7 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
                     <th>Mode of Transport</th>
                     <th>Distance</th>
                     <th>Trips per Week</th>
-                    <th>Emissions</th>
+                    <th>Emissions(kg)</th>
                     {/* <th>*update</th> */}
                     <th>*delete</th>
                 </tr>

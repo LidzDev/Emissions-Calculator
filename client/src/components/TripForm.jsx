@@ -3,7 +3,7 @@ import TransportMode from "./TransportMode"
 import { postTrip } from "../services/TripService"
 import Employee from "./Employee"
 
-const TripForm = ({modes, employees, addTrip}) => {
+const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
 
     const [tripEmissions, setTripEmissions] = useState(0)
     const [formData, setFormData] = useState({
@@ -32,7 +32,9 @@ const TripForm = ({modes, employees, addTrip}) => {
         setFormData(newFormData);
         const mode = modes.find(mode => mode.tid === newFormData.tid)
         const transportEmission = mode.emissions
-        setTripEmissions(newFormData.distance * newFormData.trips * transportEmission)
+        const newTripEmissions = (newFormData.distance * newFormData.trips * transportEmission)
+        setTripEmissions(newTripEmissions)
+        updateTripEmissions(newTripEmissions)
         console.log(tripEmissions)
     }
 
@@ -59,6 +61,7 @@ const TripForm = ({modes, employees, addTrip}) => {
                     id="employee" 
                     name="sid">
                     Employees
+                    <option value="" selected disabled>--Select employee--</option>                   
                     {employeeNodes}
                     </select>
             </div>
@@ -70,6 +73,7 @@ const TripForm = ({modes, employees, addTrip}) => {
                 id="mode" 
                 name="tid">
                 Modes of Transport
+                <option value="" selected disabled>--Select transport--</option>
                 {transportNodes}
                 </select>
             </div>

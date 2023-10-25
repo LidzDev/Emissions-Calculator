@@ -19,11 +19,10 @@ function App() {
   useEffect(() => {
     TransportService.getModesOfTransport()
       .then((modes) => setModes(modes))
-      .then(EmployeeService.getEmployees()
-            
-        .then(employees => setEmployees(employees)))
-      .then(getTrips()
-        .then(emissionsTrip => setEmissionsTrip(emissionsTrip)))
+      .then(()=> EmployeeService.getEmployees())
+      .then(employees => setEmployees(employees))
+      .then(() => getTrips())
+      .then(emissionsTrip => setEmissionsTrip(emissionsTrip))
   }, [])
 
 
@@ -55,9 +54,23 @@ function App() {
       <NavBar/>
       <Routes>
 
-      <Route path='/'element={<Home modes={modes} employees={employees} tripEmissions={tripEmissions} addTrip = {addTrip} removeTrip ={removeTrip} updateTripEmissions={updateTripEmissions}/>} />
+      <Route path='/'element={<Home 
+        modes={modes} 
+        employees={employees} 
+        tripEmissions={tripEmissions} 
+        addTrip = {addTrip} 
+        removeTrip ={removeTrip} 
+        updateTripEmissions={updateTripEmissions}/>} />
 
-      <Route path='/triptable' element={<TripTable totalEmissions={totalEmissions} removeTrip={removeTrip} updateTripEmissions={updateTripEmissions} trips={emissionsTrip} modes={modes} employees={employees} tripEmissions={tripEmissions} />} />
+      <Route path='/triptable' 
+        element={<TripTable 
+        totalEmissions={totalEmissions} 
+        removeTrip={removeTrip} 
+        updateTripEmissions={updateTripEmissions} 
+        trips={emissionsTrip} 
+        modes={modes} 
+        employees={employees} 
+        tripEmissions={tripEmissions} />} />
 
       </Routes>
     </Router>

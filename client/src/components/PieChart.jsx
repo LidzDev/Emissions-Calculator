@@ -4,8 +4,6 @@ import HighchartsReact from "highcharts-react-official";
 
 const PieChart = ({ pieChartData }) => {
 
-    console.log("piechart data", pieChartData)
-
 const options = {
     chart: {
         type: "pie"

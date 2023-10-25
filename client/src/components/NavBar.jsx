@@ -14,17 +14,7 @@ const StyledLink = styled(Link)``
 
 const NavBar = () => {
     return ( 
-    //     <NavBarContainer>
-    //         <NavList>
-    //             <NavItem>
-    //                 <StyledLink to="/">Home</StyledLink>
-    //             </NavItem>
-    //             <NavItem>
-    //                 <StyledLink to="/triptable">Results</StyledLink>
-    //             </NavItem>
-    //         </NavList>
-    //     </NavBarContainer>
-    // );
+
     <nav>
         <ul>
             <NavBarContainer>

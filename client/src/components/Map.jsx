@@ -1,6 +1,5 @@
 import { MapContainer, TileLayer, Marker, Popup }
     from "react-leaflet";
-// import MarkerClusterGroup from "react-leaflet-cluster";
 import "leaflet/dist/leaflet.css"
 import './static/map.css'
 
@@ -18,14 +17,6 @@ const Map = ({ employees }) => {
             }
         )
     })
-    // const createCustomClusterIcon = (cluster) => {
-    //     return new divIcon({
-    //         html: <div class="cluster-icon">${cluster.getChildCount()}</div>,
-    //         className: "custom-marker-cluster",
-    //         iconSize: point(33, 33, true)
-
-    //     })
-    // }
 
     return (
         

@@ -21,7 +21,6 @@ const options = {
     ]
 };
 
-
     return ( 
         <div>
             <HighchartsReact highcharts={Highcharts} options={options} />

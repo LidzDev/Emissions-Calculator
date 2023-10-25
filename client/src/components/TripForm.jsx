@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react"
+import {useState} from "react"
 import TransportMode from "./TransportMode"
 import { postTrip } from "../services/TripService"
 import Employee from "./Employee"
@@ -34,14 +34,10 @@ const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
             const transportEmissions = mode.emissions
             const newTripEmissions = (newFormData.distance * newFormData.trips * transportEmissions)
             newFormData.emissions = newTripEmissions
-            // if(!newFormData.emissions === NaN){
-                updateTripEmissions(newTripEmissions)
-            // }
+            updateTripEmissions(newTripEmissions)
         }
-            setFormData(newFormData);
+        setFormData(newFormData);
         
-        
-
     }
 
     const onSubmit = (e) =>{
@@ -75,7 +71,6 @@ const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
                     </select>
             </div>
             <div className="formWrap">
-
                 <label htmlFor="mode">Mode of Transport</label><br/>
                 <select 
                 onChange={onChange} 

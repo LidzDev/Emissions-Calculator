@@ -1,6 +1,7 @@
 const Trip = ({trip, staffName, transportMode, emissions, handleDeleteTrip}) => {
 
     const emissionsKg = (emissions / 1000)
+    const checkingEmissionsKg = isNaN(emissionsKg) ? 0 : emissionsKg
 
     return ( 
         <tr>
@@ -8,7 +9,7 @@ const Trip = ({trip, staffName, transportMode, emissions, handleDeleteTrip}) => 
             <td>{transportMode}</td>
             <td>{trip.distance}</td>
             <td>{trip.trips}</td>
-            <td>{emissionsKg}</td>
+            <td>{checkingEmissionsKg}</td>
             {/* <td><button className="update-btn">Update</button></td> */}
             <td><button onClick={handleDeleteTrip} className="delete-btn">Delete</button></td>
         </tr>

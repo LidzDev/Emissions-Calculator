@@ -45,6 +45,7 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
     })
 
     const emissionsKg = (totalEmissions / 1000)
+    const checkingEmissionsKg = isNaN(emissionsKg) ? 0 : emissionsKg
 
     const employeeEmissions = {};
 
@@ -61,23 +62,17 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
         }
     });
 
-//     useEffect(() => {
-
     const pieChartData = Object.entries(employeeEmissions).map(([name, emissions]) => ({
         name: name,
         y: emissions
         }))
-//     // .then(banana => setPieChartData(banana))
-// }, [pieChartData])
-
-// console.log("piechartdata", pieChartData)
 
     return (
         <>
             <section>
             <div className="total-emissions-intro">
                 <p>Your company's total emissions</p>
-                <p className="co-total-emissions">{emissionsKg} kg</p>
+                <p className="co-total-emissions">{checkingEmissionsKg} kg</p>
                 <p>of CO2 produced through travel.</p>       
             </div>
             <div>

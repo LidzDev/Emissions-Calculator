@@ -200,29 +200,7 @@ db.employees.insertMany([
         //coordinates: 52.116266, 5.078749
     }
 ]);
-db.trips.insertMany([
-    {
-        "sid": 1,
-        "tid": 2,
-        "distance": 40,
-        "trips": 10,
-        "emissions": 6760
-    },
-    {
-        "sid": 2,
-        "tid": 5,
-        "distance": 10,
-        "trips": 8,
-        "emissions": 2080
-    },
-    {
-        "sid": 5,
-        "tid": 12,
-        "distance": 5,
-        "trips": 4,
-        "emissions": 560
-    }
-])
+
 db.business.insertOne([
     {
         "name": "Heineken Experience",

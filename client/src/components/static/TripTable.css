@@ -1,13 +1,24 @@
+p {
+    text-align: center;
+}
+
 section.pattern {
     color: #130e3d;
     font-family: 'Inter', sans-serif;
     padding-top: 20vh;
     padding-bottom: 20vh;
     /* padding: 100px 10px; */
-    margin-top: 100px;
+    margin-top: 60px;
     background-color: #edefff;
     opacity: 1;
     background-image:repeating-radial-gradient( circle at 0 0, transparent 0, #edefff 27px ), repeating-linear-gradient( #ffffff55, #ffffff );
+
+    /* background-color: #ffffff;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 27px ), repeating-linear-gradient( #EDEFFF55, #EDEFFF ); */
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
 }
 
@@ -20,17 +31,47 @@ section.pattern {
     margin: 0;
 }
 
+p.co-total-emissions {
+    color: #6b5bff;
+    /* font-size: 58px; */
+    /* font-size: 15vw; */
+    /* font-size: 10vh; */
+    font-size: 12vh;
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+}
+
 section.table-section {
-    margin: 10px 50px;
+    /* margin: 10px 50px; */
     color: #130e3d;
     font-family: 'Inter', sans-serif;
-    padding-top: 2rem;
-}
-
-p {
-    text-align: center;
+    /* padding-top: 2rem; */
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 
 }
+
+section.chart-section {
+    padding-top: 10px;
+    padding-bottom: 10vh;
+    margin-top: 5vh;
+    /* margin-bottom: 10vh; */
+
+    background-color: #edefff;
+    opacity: 1;
+    background-image:repeating-radial-gradient( circle at 0 0, transparent 0, #edefff 27px ), repeating-linear-gradient( #ffffff55, #ffffff );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.chart-section > h2 {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
 table {
     border-collapse: collapse;
     margin-left: auto; /*centers the table*/
@@ -41,17 +82,21 @@ table {
 
 div.table-div{
     overflow-x: auto;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 table, tr{
     border: 1px solid #edefff;
+    
 }
 
 p.co-total-emissions {
     color: #6b5bff;
     /* font-size: 58px; */
     /* font-size: 15vw; */
-    font-size: 10vh;;
+    /* font-size: 10vh; */
+    font-size: 12vh;
     font-weight: bold;
     padding: 0px;
     margin: 0px;

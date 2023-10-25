@@ -24,7 +24,7 @@ const options = {
 
 
     return ( 
-        <div className="charts">
+        <div className="charts" id="pie-chart">
             <HighchartsReact highcharts={Highcharts} options={options} className="charts"/>
         </div>
     );

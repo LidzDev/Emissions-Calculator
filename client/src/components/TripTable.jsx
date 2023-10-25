@@ -79,7 +79,7 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
             </section>
             <section className="table-section">
                 <div>
-                    <h2>See a breakdown of your carbon footprint below </h2>
+                    <h2>See a breakdown of your carbon footprint below</h2>
                     <div className="table-div">
                         <table>
                             <tr>
@@ -96,11 +96,12 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
                     </div>
                 </div>
             </section>
-            <br/>
-            <h2>Let's break things down a bit more...</h2>
-            <PieChart pieChartData={pieChartData} />
-            <h3>Employee Commutes</h3>
-            <div><Map employees={employees}/></div>
+            <section className="chart-section">
+                <h2>Let's break things down a bit more...</h2>
+                <PieChart pieChartData={pieChartData} />
+                <h3>Employee Commutes</h3>
+                <div><Map employees={employees}/></div>
+            </section>
         </>
     );
 }

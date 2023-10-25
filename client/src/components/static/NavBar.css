@@ -1,43 +1,50 @@
 ul {
-    background-color: #6b5bff;
-    color: white;
+    background-color: white;
+    color: #130e3d;
     font-family: 'Inter', sans-serif;
     width: 100%;
-    height: 10%;
+    height: 8vh;
+    padding: 5px;
     margin: 0;
     list-style: none;
     list-style-type: none;
     text-decoration: none; 
-        /* this should be working!!! */
-    /* position: fixed;  */
-    /* top: 0; //this fixes the top but causes other issue */
-        /* //this will fix it at the top but in a funky way at th emoment */
+    position: fixed;  
+    top: 0;
     /* overflow: hidden; */
-    display: flex; /*need to review what exactly this does*/
-    /* justify-content: space-around; */
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: center;
 
 }
 
 li {
-    font-size: 24px;
+    font-size: 30px;
     text-decoration: none;
+    
 }
 
 li.header-page-name{
-    padding: 15px;
+    padding: 15px 15px 15px 5px;
     text-decoration: none;
     /* display: block; */
     text-align: center;
+    /* font-weight: lighter; */
 }
 
 img.logo {
-    width: 8vh;
+    height: 6vh;
     padding: 0;
-    margin: 5px 5px 0px;
+    margin: 5px 15px 0px 5px;
 }
 
 .home-page, .entry-page {
-    color: white;
+    color: #130e3d;
+    text-decoration: none; 
+}
+
+.home-page:hover, .entry-page:hover {
+    color: #6b5bff;
     text-decoration: none; 
 }
 

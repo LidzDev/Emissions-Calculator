@@ -2,6 +2,7 @@ import {useState, useEffect} from "react"
 import TransportMode from "./TransportMode"
 import { postTrip } from "../services/TripService"
 import Employee from "./Employee"
+import "./static/TripForm.css"; 
 
 const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
 

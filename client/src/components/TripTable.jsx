@@ -40,27 +40,30 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
 
     return (
         <section>
-          <div className="total-emissions-header">
-            <p>Your company's total emissions</p>
+          <div className="total-emissions-intro">
+            <p>Your company's total emissions:</p>
             <p className="co-total-emissions">{emissionsKg} kg</p>
-            <p>of CO2 produced through travel.</p>       
+            <p>of CO2 produced through travel</p>       
           </div>
-          <br/>
-          <h2>See a breakdown of your carbon footprint below </h2>
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Mode of Transport</th>
-                    <th>Distance</th>
-                    <th>Trips per Week</th>
-                    <th>Emissions(kg)</th>
-                    {/* <th>*update</th> */}
-                    <th>*delete</th>
-                </tr>
-                {tripItems}
-            </table>
+            <div>
+                <h2>See a breakdown of your carbon footprint below </h2>
+                <div className="table-div">
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Mode of Transport</th>
+                            <th>Distance</th>
+                            <th>Trips per Week</th>
+                            <th>Emissions(kg)</th>
+                            <th>{/*delete*/}</th>
+                        </tr>
+                        {tripItems}
+                    </table>
+                </div>
+            </div>
             <br/>
             <h2>Let's break things down a bit more...</h2>
+
             <p>*charts go here*</p>
         </section>
     );

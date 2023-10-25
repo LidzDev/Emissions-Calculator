@@ -6,7 +6,7 @@ import TripEmissionsTotal from "./TripEmissionsTotal";
 const Home = ({ modes, employees, addTrip }) => {
 
     const title = "CO2 Calculator"
-    const intro = "Calculate your carbon footprint"
+    const intro = "Calculate the carbon emissions proudced by your commute & add them to your company's database."
 
     const [tripEmissions, setTripEmissions] = useState(0)
 

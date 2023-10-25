@@ -1,6 +1,6 @@
 const Trip = ({trip, staffName, transportMode, emissions, handleDeleteTrip}) => {
 
-    const emissionsKg = (emissions / 1000)
+    const emissionsKg = (emissions / 1000).toFixed(2)
     const checkingEmissionsKg = isNaN(emissionsKg) ? 0 : emissionsKg
 
     return ( 

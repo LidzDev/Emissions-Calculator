@@ -44,7 +44,7 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
         />
     })
 
-    const emissionsKg = (totalEmissions / 1000)
+    const emissionsKg = (totalEmissions / 1000).toFixed(2)
     const checkingEmissionsKg = isNaN(emissionsKg) ? 0 : emissionsKg
 
     const employeeEmissions = {};

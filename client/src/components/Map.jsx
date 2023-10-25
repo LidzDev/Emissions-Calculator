@@ -14,7 +14,7 @@ const Map = ({ employees }) => {
         return (        
         {
             geocode: geocode,
-            popUp: popUp
+            popUp: popUp,
         }
     )
 })

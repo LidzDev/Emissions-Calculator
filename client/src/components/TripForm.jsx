@@ -3,8 +3,12 @@ import TransportMode from "./TransportMode"
 import { postTrip } from "../services/TripService"
 import Employee from "./Employee"
 import "./static/TripForm.css"; 
+// import { toast } from 'react-toastify'
+import { useNavigate } from 'react-router-dom'
 
 const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
+
+    const navigate = useNavigate()
 
     const [formData, setFormData] = useState({
         sid: 0,
@@ -44,20 +48,26 @@ const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
 
     }
 
-    const onSubmit = (e) =>{
+    const onSubmit = (e) => {
         e.preventDefault();
-        if (!(formData.distance && formData.sid && formData.tid && formData.emissions) ){
-            return
+        if (!(formData.distance && formData.sid && formData.tid && formData.emissions)) {
+            return;
         }
-        postTrip(formData).then((data)=>{
-            addTrip(data);
-        })
-        setFormData({
-            sid: 0,
-            tid: 0,
-            distance: 0,
-            trips: 0
-        });
+        postTrip(formData)
+            .then((data) => {
+                addTrip(data);
+                setFormData({
+                    sid: 0,
+                    tid: 0,
+                    distance: 0,
+                    trips: 0
+                });
+                navigate('/triptable')
+                // toast.success('Submission Successful!', {
+                //     position: 'top-right',
+                //     autoClose: 3000,
+                // });
+            });
     }
     
     return (
@@ -68,9 +78,10 @@ const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
                 <select
                     onChange={onChange} 
                     id="employee" 
-                    name="sid">
+                    name="sid"
+                    defaultValue="">
                     Employees
-                    <option value="" selected disabled>--Select employee--</option>                   
+                    <option value="" disabled>--Select employee--</option>                   
                     {employeeNodes}
                     </select>
             </div>
@@ -80,9 +91,10 @@ const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
                 <select 
                 onChange={onChange} 
                 id="mode" 
-                name="tid">
+                name="tid"
+                defaultValue="">
                 Modes of Transport
-                <option value="" selected disabled>--Select transport--</option>
+                <option value="" disabled>--Select transport--</option>
                 {transportNodes}
                 </select>
             </div>

@@ -7,6 +7,9 @@ import Home from './components/Home'
 import NavBar from './components/NavBar'
 import TripTable from './components/TripTable'
 import './App.css'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   const [modes, setModes] = useState([])
@@ -52,6 +55,7 @@ function App() {
   return (
     <Router>
       <NavBar/>
+      <ToastContainer />
       <Routes>
 
       <Route path='/'element={<Home 
@@ -60,7 +64,8 @@ function App() {
         tripEmissions={tripEmissions} 
         addTrip = {addTrip} 
         removeTrip ={removeTrip} 
-        updateTripEmissions={updateTripEmissions}/>} />
+        updateTripEmissions={updateTripEmissions}
+        />} />
 
       <Route path='/triptable' 
         element={<TripTable 

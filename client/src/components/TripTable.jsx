@@ -79,18 +79,21 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
             <div>
             <h2>See a breakdown of your carbon footprint below </h2>
             <div className="table-div">
-                <table>
+            <table>
+                <thead>
                     <tr>
                         <th>Name</th>
                         <th>Mode of Transport</th>
                         <th>Distance</th>
                         <th>Trips per Week</th>
                         <th>Emissions(kg)</th>
-                        {/* <th>*update</th> */}
                         <th></th>
                     </tr>
+                </thead>
+                <tbody>
                     {tripItems}
-                </table>
+                </tbody>
+            </table>
             </div>
             </div>
             <br/>

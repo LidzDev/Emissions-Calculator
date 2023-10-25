@@ -86,7 +86,7 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
                         <th>Trips per Week</th>
                         <th>Emissions(kg)</th>
                         {/* <th>*update</th> */}
-                        <th>*delete</th>
+                        <th></th>
                     </tr>
                     {tripItems}
                 </table>

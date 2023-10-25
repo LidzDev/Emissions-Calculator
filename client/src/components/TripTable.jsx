@@ -20,6 +20,7 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
         const staffName = staff.name
         const mode = modes.find(mode => mode.tid === trip.tid)
         const transportMode = mode.mode
+        const emissions = mode.emissions
 
         const handleDeleteTrip = () => {
             deleteTrip(trip._id).then(()=>{
@@ -32,6 +33,7 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
             trip={trip}
             staffName={staffName}
             transportMode={transportMode}
+            emissions={emissions}
             handleDeleteTrip={handleDeleteTrip}
         />
     })

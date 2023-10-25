@@ -31,11 +31,10 @@ const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
         newFormData[e.target.name] = parseInt(e.target.value);
         setFormData(newFormData);
         const mode = modes.find(mode => mode.tid === newFormData.tid)
-        const transportEmission = mode.emissions
-        const newTripEmissions = (newFormData.distance * newFormData.trips * transportEmission)
+        const transportEmissions = mode.emissions
+        const newTripEmissions = (newFormData.distance * newFormData.trips * transportEmissions)
         setTripEmissions(newTripEmissions)
         updateTripEmissions(newTripEmissions)
-        console.log(tripEmissions)
     }
 
     const onSubmit = (e) =>{

@@ -1,6 +1,6 @@
-const Trip = ({trip, staffName, transportMode, handleDeleteTrip}) => {
+const Trip = ({trip, staffName, transportMode, emissions, handleDeleteTrip}) => {
 
-    const emissionsKg = (trip.emissions / 1000)
+    const emissionsKg = (emissions / 1000)
 
     return ( 
         <tr>

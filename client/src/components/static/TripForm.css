@@ -1,0 +1,10 @@
+.formWrap {
+    font-family: 'Inter', sans-serif;
+   
+}
+
+#employee, #mode, #distance, #trips {
+    font-family: 'Inter', sans-serif;
+    width: -webkit-fill-available;
+    margin: 2px 0px;
+}

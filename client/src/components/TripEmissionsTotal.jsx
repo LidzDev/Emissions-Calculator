@@ -4,10 +4,10 @@ const TripEmissionsTotal = ({tripEmissions}) => {
 
     return ( 
         <div className="form-output">
-            <p>Estimated CO2 emissions: </p>
+            <h2><b>Estimated CO2 emissions: </b></h2>
                 <p className="trip-emissions-total">{emissionsKg} kg</p>
-//                     <button className="log-estimate-btn" >Log estimate</button>
-                <p>View total estimated CO2 emissions *links to entries page*</p>
+                <br></br>
+                <a href="/triptable" className="results-link">View total estimated CO2 emissions</a>
          </div>
     );
 }

@@ -3,16 +3,10 @@ import MainTitle from "./MainTitle"
 import TripForm from "./TripForm";
 import TripEmissionsTotal from "./TripEmissionsTotal";
 
-const Home = ({ modes, employees, addTrip }) => {
+const Home = ({ modes, employees, tripEmissions, addTrip, updateTripEmissions }) => {
 
     const title = "CO2 Calculator"
     const intro = "Calculate the carbon emissions proudced by your commute & add them to your company's database."
-
-    const [tripEmissions, setTripEmissions] = useState(0)
-
-    const updateTripEmissions = (newTripEmissions) => {
-        setTripEmissions(newTripEmissions)
-    }
 
     return (
         <>

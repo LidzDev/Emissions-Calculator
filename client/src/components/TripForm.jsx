@@ -6,7 +6,6 @@ import "./static/TripForm.css";
 
 const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
 
-    const [tripEmissions, setTripEmissions] = useState(0)
     const [formData, setFormData] = useState({
         sid: 0,
         tid: 0,
@@ -30,17 +29,26 @@ const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
     const onChange = (e) =>{
         const newFormData = Object.assign({}, formData);
         newFormData[e.target.name] = parseInt(e.target.value);
-        setFormData(newFormData);
         const mode = modes.find(mode => mode.tid === newFormData.tid)
-        const transportEmission = mode.emissions
-        const newTripEmissions = (newFormData.distance * newFormData.trips * transportEmission)
-        setTripEmissions(newTripEmissions)
-        updateTripEmissions(newTripEmissions)
-        console.log(tripEmissions)
+        if (mode){
+            const transportEmissions = mode.emissions
+            const newTripEmissions = (newFormData.distance * newFormData.trips * transportEmissions)
+            newFormData.emissions = newTripEmissions
+            // if(!newFormData.emissions === NaN){
+                updateTripEmissions(newTripEmissions)
+            // }
+        }
+            setFormData(newFormData);
+        
+        
+
     }
 
     const onSubmit = (e) =>{
         e.preventDefault();
+        if (!(formData.distance && formData.sid && formData.tid && formData.emissions) ){
+            return
+        }
         postTrip(formData).then((data)=>{
             addTrip(data);
         })

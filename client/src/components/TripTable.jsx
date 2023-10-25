@@ -1,9 +1,12 @@
+import { useState, useEffect } from 'react'
 import Trip from "./Trip"
 import { deleteTrip } from "../services/TripService"
 import "./static/TripTable.css";
 import PieChart from "./PieChart";
 
 const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, employees, tripEmissions, updateTripEmissions }) => {
+
+    // const [pieChartData, setPieChartData] = useState({})
 
     const handleUpdateTrip = () => {
         updateTrip({
@@ -58,15 +61,16 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
         }
     });
 
-    console.log("Employee Emissions:", employeeEmissions)
+//     useEffect(() => {
 
     const pieChartData = Object.entries(employeeEmissions).map(([name, emissions]) => ({
         name: name,
-        y: emissions,
-    }));
-    
-    
-    
+        y: emissions
+        }))
+//     // .then(banana => setPieChartData(banana))
+// }, [pieChartData])
+
+// console.log("piechartdata", pieChartData)
 
     return (
         <>

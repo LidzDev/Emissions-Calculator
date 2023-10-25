@@ -85,6 +85,7 @@ const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
                     id="distance" 
                     name="distance" 
                     value={formData.distance}
+                    min="1"
                     />
             </div>
             <div className="formWrap">
@@ -95,6 +96,7 @@ const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
                     id="trips" 
                     name="trips" 
                     value={formData.trips}
+                    min="1"
                     />
             </div>
             <input type="submit" value="Log this estimate" id="save"/>

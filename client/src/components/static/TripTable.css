@@ -1,0 +1,69 @@
+
+section {
+    margin: 0px 50px;
+    color: #130e3d;
+    font-family: 'Inter', sans-serif;
+}
+p {
+    text-align: center;
+
+}
+table {
+    border-collapse: collapse;
+    margin-left: auto; /*centers the table*/
+    margin-right: auto; /*centers the table*/
+    
+}
+
+div.table-div{
+    overflow-x: auto;
+}
+
+table, tr{
+    border: 1px solid #edefff;
+}
+
+p.co-total-emissions {
+    color: #6b5bff;
+    font-size: 58px;
+    font-weight: bold;
+    margin: 10px;
+
+}
+
+h2 {
+    text-align: center;
+    color: #6b5bff;
+}
+
+th {
+    background-color: #edefff;
+    padding: 10px;
+
+}
+
+td {
+    padding: 0px 10px;
+}
+
+button.update-btn {
+    background-color: #1b998b;
+    padding: 5px 15px;
+    border-radius: 10px; 
+    border-color: #1b998b;
+    margin: 5px;
+}
+
+button.delete-btn {
+    background-color: #f14668;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border-color:  #f14668;
+
+}
+
+.total-emissions-header {
+    font-weight: bold;
+    font-size: 18px;
+
+}

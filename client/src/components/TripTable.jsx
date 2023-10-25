@@ -1,6 +1,6 @@
-// import TransportMode from "./TransportMode"
 import Trip from "./Trip"
 import { deleteTrip } from "../services/TripService"
+import "./static/TripTable.css";
 
 const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, employees }) => {
 
@@ -40,9 +40,13 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
 
     return (
         <section>
+          <div className="total-emissions-header">
             <p>Your company's total emissions</p>
             <p className="co-total-emissions">{emissionsKg} kg</p>
-            <p>of CO2 produced through travel.</p>
+            <p>of CO2 produced through travel.</p>       
+          </div>
+          <br/>
+          <h2>See a breakdown of your carbon footprint below </h2>
             <table>
                 <tr>
                     <th>Name</th>
@@ -55,6 +59,9 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
                 </tr>
                 {tripItems}
             </table>
+            <br/>
+            <h2>Let's break things down a bit more...</h2>
+            <p>*charts go here*</p>
         </section>
     );
 }

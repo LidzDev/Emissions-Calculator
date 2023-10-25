@@ -1,9 +1,9 @@
 body {
     color: #130e3d;
     font-family: 'Inter', sans-serif;
-    
+    margin: 0;
+   
 }
-
 
 .flex-box {
     display: flex;
@@ -13,11 +13,10 @@ body {
     align-items: stretch; /*might remove this- it should stretch the boxes so that they fill the container*/
     padding: 20px;
     margin: 10px 50px;
-    /* margin: 20px 50px; */
 }
 
 .calc-form {
-    background-color: #6b5bff;
+    background-color:  #edefff;
     padding: 20px;
     margin: 20px;
     width: 350px;
@@ -32,8 +31,23 @@ body {
     text-align: center;
 }
 
+#trip-form > h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+div.formWrap {
+    padding: 5px;
+
+}
+
 button {
     font-family: 'Inter', sans-serif;
+}
+
+#save:active {
+    background-color: #1b998b;
+    border-color: #1b998b;
 }
 
 .trip-emissions-total {
@@ -42,6 +56,16 @@ button {
     /* font-size: 60px; */
     font-weight: bold;
     color: #6b5bff;
+    margin: 15px;
+}
+
+input#save {
+    font-family: 'Inter', sans-serif;
+    background-color: #130e3d;
+    color: #fff;
+    padding: 5px 15px;
+    margin: 10px 0px;
+    border-radius: 10px;
 }
 
 button.log-estimate-btn {

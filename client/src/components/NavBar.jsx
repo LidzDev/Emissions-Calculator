@@ -1,50 +1,51 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import styled from 'styled-components'
+import './static/NavBar.css'
 
 
-export const NavBarContainer = styled.nav`
-    background-color: #130E3D;
-    color: white;
-    padding: 10px;
-`;
+export const NavBarContainer = styled.nav``;
 
-export const NavList = styled.ul`
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-`;
+export const NavList = styled.ul``;
 
-export const NavItem = styled.li`
-    margin: 0;
-    color: white;
-    font-size: 26px;
-`;
+export const NavItem = styled.li``;
 
-const StyledLink = styled(Link)`
-    text-decoration: none;
-    color: white;
-    font-family: 'Inter', sans-serif;
-
-    &:hover {
-    text-decoration: underline;
-    }
-`
+const StyledLink = styled(Link)``
 
 const NavBar = () => {
     return ( 
+    //     <NavBarContainer>
+    //         <NavList>
+    //             <NavItem>
+    //                 <StyledLink to="/">Home</StyledLink>
+    //             </NavItem>
+    //             <NavItem>
+    //                 <StyledLink to="/triptable">Results</StyledLink>
+    //             </NavItem>
+    //         </NavList>
+    //     </NavBarContainer>
+    // );
+
+    <ul>
         <NavBarContainer>
             <NavList>
-                <NavItem>
-                    <StyledLink to="/">Home</StyledLink>
-                </NavItem>
-                <NavItem>
-                    <StyledLink to="/triptable">Results</StyledLink>
-                </NavItem>
+                <li>
+                    <img src="/src/components/static/emit_logo.jpg" alt="Emit logo" className="logo"/>
+                </li>
+                <li className="header-page-name">
+                    <NavItem>
+                        <StyledLink to="/" className="home-page">Home</StyledLink>
+                    </NavItem>
+                </li>
+                <li className="header-page-name">
+                    <NavItem>
+                        <StyledLink to="/triptable" className="entry-page">Results</StyledLink>
+                    </NavItem>
+                </li>
             </NavList>
         </NavBarContainer>
-    );
+    </ul>
+    )
 }
 
 export default NavBar

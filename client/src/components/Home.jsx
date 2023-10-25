@@ -3,6 +3,7 @@ import MainTitle from "./MainTitle"
 import TripForm from "./TripForm";
 import TripEmissionsTotal from "./TripEmissionsTotal";
 
+
 const Home = ({ modes, employees, tripEmissions, addTrip, updateTripEmissions }) => {
 
     const title = "CO2 Calculator"

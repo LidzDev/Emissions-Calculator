@@ -3,6 +3,7 @@ import Trip from "./Trip"
 import { deleteTrip } from "../services/TripService"
 import "./static/TripTable.css";
 import PieChart from "./PieChart";
+import Map from './Map';
 
 const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, employees, tripEmissions, updateTripEmissions }) => {
 
@@ -96,6 +97,7 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
             <h2>Let's break things down a bit more...</h2>
             </section>
             <PieChart pieChartData={pieChartData} />
+            <Map employees={employees}/>
         </>
     );
 }

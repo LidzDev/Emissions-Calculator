@@ -13,7 +13,6 @@ body {
     align-items: stretch; /*might remove this- it should stretch the boxes so that they fill the container*/
     padding: 20px;
     margin: 10px 50px;
-    /* margin: 20px 50px; */
 }
 
 .calc-form {

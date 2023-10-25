@@ -12,9 +12,10 @@ ul {
     /* position: fixed;  */
     /* top: 0; //this fixes the top but causes other issue */
         /* //this will fix it at the top but in a funky way at th emoment */
-
+    /* overflow: hidden; */
     display: flex; /*need to review what exactly this does*/
     /* justify-content: space-around; */
+
 }
 
 li {
@@ -34,5 +35,11 @@ img.logo {
     padding: 0;
     margin: 5px 5px 0px;
 }
+
+.home-page, .entry-page {
+    color: white;
+    text-decoration: none; 
+}
+
 
 

@@ -34,12 +34,12 @@ const NavBar = () => {
                 </li>
                 <li className="header-page-name">
                     <NavItem>
-                        <StyledLink to="/">Home</StyledLink>
+                        <StyledLink to="/" className="home-page">Home</StyledLink>
                     </NavItem>
                 </li>
                 <li className="header-page-name">
                     <NavItem>
-                        <StyledLink to="/triptable">Results</StyledLink>
+                        <StyledLink to="/triptable" className="entry-page">Results</StyledLink>
                     </NavItem>
                 </li>
             </NavList>

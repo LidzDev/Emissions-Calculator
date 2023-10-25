@@ -106,8 +106,11 @@ db.employees.insertMany([
         "city": "Amsterdam",
         "country": "Netherlands",
         "postcode": "1098 PN",
-        "sid": 1
-        //coordinates: 52.352295, 4.942140
+        "sid": 1,
+        "coordinates": {
+            "latitude": 52.352295,
+            "longitude": 4.942140
+        }
     },
     {
         "name": "Jeremy Johnson",
@@ -115,8 +118,11 @@ db.employees.insertMany([
         "city": "Haarlem",
         "country": "Netherlands",
         "postcode": "2032 PG",
-        "sid": 2
-        //coordinates: 52.380154, 4.648886
+        "sid": 2,
+        "coordinates": {
+            "latitude": 52.380154, 
+            "longitude": 4.648886
+        }
     },
     {
         "name": "Arlow Marlow",
@@ -124,8 +130,11 @@ db.employees.insertMany([
         "city": "Amsterdam",
         "country": "Netherlands",
         "postcode": "1033 KE",
-        "sid": 3
-        //coordinates: 52.411327, 4.899033
+        "sid": 3,
+        "coordinates": {
+            "latitude":  52.411327, 
+            "longitude": 4.899033
+        }
     },
     {
         "name": "Bill Wilson",
@@ -133,8 +142,11 @@ db.employees.insertMany([
         "city": "Amstelveen",
         "country": "Netherlands",
         "postcode": "1033 KE",
-        "sid": 4
-        //coordinates: 52.278706, 4.819517
+        "sid": 4,
+        "coordinates": {
+            "latitude": 52.278706, 
+            "longitude": 4.819517
+        }
     },
     {
         "name": "Isabella Arabella",
@@ -142,8 +154,11 @@ db.employees.insertMany([
         "city": "London",
         "country": "United Kingdom",
         "postcode": "E16 2DD",
-        "sid": 5
-        //coordinates: 51.503420, 0.045320
+        "sid": 5,
+        "coordinates": {
+            "latitude": 51.503420, 
+            "longitude": 0.045320
+        }
     },
     {
         "name": "Winifried Watson",
@@ -151,8 +166,11 @@ db.employees.insertMany([
         "city": "Amsterdam",
         "country": "Netherlands",
         "postcode": "1074 CG",
-        "sid": 6
-        //coordinates: 52.357235, 4.901551
+        "sid": 6,
+        "coordinates": {
+            "latitude": 52.357235, 
+            "longitude": 4.901551
+        }
     },
     {
         "name": "Peter Peterson",
@@ -160,8 +178,11 @@ db.employees.insertMany([
         "city": "Bussum",
         "country": "Netherlands",
         "postcode": "1405 AE",
-        "sid": 7
-        //coordinates: 52.280747, 5.156302
+        "sid": 7,
+        "coordinates": {
+            "latitude": 52.280747, 
+            "longitude": 5.156302
+        }
     },
     {
         "name": "Hattie Hattersworth",
@@ -169,8 +190,11 @@ db.employees.insertMany([
         "city": "Rotterdam",
         "country": "Netherlands",
         "postcode": "3068 PL",
-        "sid": 8
-        //coordinates: 51.957132, 4.547503
+        "sid": 8,
+        "coordinates": {
+            "latitude": 51.957132, 
+            "longitude": 4.547503
+        }
     },
     {
         "name": "Neville Neilsson",
@@ -178,8 +202,11 @@ db.employees.insertMany([
         "city": "Amsterdam",
         "country": "Netherlands",
         "postcode": "1058 CW",
-        "sid": 9
-        //coordinates: 52.362091, 4.851007
+        "sid": 9,
+        "coordinates": {
+            "latitude": 52.362091, 
+            "longitude": 4.851007
+        }
     },
     {
         "name": "Hubert Henklestenk",
@@ -187,8 +214,11 @@ db.employees.insertMany([
         "city": "Amsterdam",
         "country": "Netherlands",
         "postcode": "1058 CW",
-        "sid": 10
-        //coordinates: 52.362091, 4.851007
+        "sid": 10,
+        "coordinates": {
+            "latitude": 52.362091, 
+            "longitude": 4.851007
+        }
     },
     {
         "name": "Kelly Clarkson",
@@ -196,8 +226,11 @@ db.employees.insertMany([
         "city": "Utrecht",
         "country": "Netherlands",
         "postcode": "3555 CL",
-        "sid": 11
-        //coordinates: 52.116266, 5.078749
+        "sid": 11,
+        "coordinates": {
+            "latitude": 52.116266, 
+            "longitude": 5.078749
+        }
     }
 ]);
 

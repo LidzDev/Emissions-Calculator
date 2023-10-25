@@ -74,7 +74,7 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
                 <div className="total-emissions-intro">
                     <p>Your company's total emissions:</p>
                     <p className="co-total-emissions">{checkingEmissionsKg} kg</p>
-                    <p>of CO2 produced through travel.</p>       
+                    <p>of CO2 produced through travel</p>       
                 </div>
             </section>
             <section className="table-section">

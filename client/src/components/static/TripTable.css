@@ -66,10 +66,8 @@ section.chart-section {
 }
 
 .chart-section > h2 {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 
 table {
@@ -106,6 +104,9 @@ p.co-total-emissions {
 h2 {
     text-align: center;
     color:#130e3d;
+    margin-left: 50px;
+    margin-right: 50px;
+
 }
 
 th {

@@ -6,6 +6,9 @@ import "./static/PieChart.css"
 const PieChart = ({ pieChartData }) => {
 
 const options = {
+    credits: { 
+        enabled: false 
+    },
     chart: {
         type: "pie"
     },
@@ -21,7 +24,6 @@ const options = {
         }
     ]
 };
-
 
     return ( 
         <div className="charts" id="pie-chart">

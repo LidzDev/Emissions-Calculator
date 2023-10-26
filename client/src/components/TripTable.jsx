@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import Trip from "./Trip"
 import { deleteTrip } from "../services/TripService"
 import "./static/TripTable.css";
@@ -7,7 +6,6 @@ import Map from './Map';
 
 const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, employees, tripEmissions, updateTripEmissions }) => {
 
-    // const [pieChartData, setPieChartData] = useState({})
 
     const handleUpdateTrip = () => {
         updateTrip({
@@ -27,7 +25,6 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
         const transportMode = mode.mode
         const emissions = mode.emissions
         const newTripEmissions = (trip.distance * trip.trips * emissions)
-        // console.log("new trip", newTripEmissions)
 
         const handleDeleteTrip = () => {
             deleteTrip(trip._id).then(()=>{

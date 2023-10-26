@@ -1,6 +1,6 @@
 h1.CO2-calc-title {
     /* color: #130e3d; */
-    color: #1B998B;
+    color: #6B5BFF;
     font-family: 'Inter', sans-serif;
     font-size: 48px;
     text-align: center;
@@ -8,5 +8,5 @@ h1.CO2-calc-title {
 }
 
 p {
-    margin: 10px;
+    margin: 10px 50px;
 }

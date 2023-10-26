@@ -2,7 +2,7 @@
 import { MapContainer, TileLayer, Marker, Popup }
     from "react-leaflet";
 import "leaflet/dist/leaflet.css"
-import './static/map.css'
+import './static/Map.css'
 
 const Map = ({ employees }) => {
 

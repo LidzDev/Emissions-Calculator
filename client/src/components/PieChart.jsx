@@ -1,6 +1,7 @@
 import React from "react";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
+import "./static/PieChart.css"
 
 const PieChart = ({ pieChartData }) => {
 
@@ -15,7 +16,7 @@ const options = {
         text: "Employee Emissions"
     },
     subtitle:{
-        text: "selected employees emissions in relation to the whole company"
+        text: "See employees' emissions in relation to the company as a whole."
     },
     series: [
         {
@@ -25,8 +26,8 @@ const options = {
 };
 
     return ( 
-        <div>
-            <HighchartsReact highcharts={Highcharts} options={options} />
+        <div className="charts" id="pie-chart">
+            <HighchartsReact highcharts={Highcharts} options={options} className="charts"/>
         </div>
     );
 }

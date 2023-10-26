@@ -1,3 +1,5 @@
+import "./static/TripEmissionsTotal.css"
+
 const TripEmissionsTotal = ({tripEmissions}) => {
 
     const emissionsKg = (tripEmissions / 1000)

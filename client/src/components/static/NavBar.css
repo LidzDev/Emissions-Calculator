@@ -1,5 +1,5 @@
 ul {
-    background-color: white;
+    background-color: #fff;
     color: #130e3d;
     font-family: 'Inter', sans-serif;
     width: 100%;
@@ -15,12 +15,14 @@ ul {
     display: flex;
     /* justify-content: flex-start; */
     align-items: center;
+    z-index: 999;
 
 }
 
 li {
-    font-size: 30px;
+    font-size: 20px;
     text-decoration: none;
+    font-weight: bold;
     
 }
 

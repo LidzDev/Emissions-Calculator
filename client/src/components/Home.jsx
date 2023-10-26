@@ -10,7 +10,9 @@ const Home = ({ modes, employees, tripEmissions, addTrip, updateTripEmissions })
 
     return (
         <>
-            <MainTitle title={title} intro={intro} />
+            <section className="back-pattern">
+                <MainTitle title={title} intro={intro} />
+            </section>
             <div className="flex-box">
                 <div className="calc-form">
                     <TripForm modes={modes} employees={employees} addTrip={addTrip} updateTripEmissions={updateTripEmissions}/>

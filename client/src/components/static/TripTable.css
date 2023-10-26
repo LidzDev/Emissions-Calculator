@@ -8,17 +8,18 @@ section.pattern {
     padding-top: 20vh;
     padding-bottom: 20vh;
     /* padding: 100px 10px; */
-    margin-top: 60px;
+    /* margin-top: 40px; */
     background-color: #edefff;
     opacity: 1;
     background-image:repeating-radial-gradient( circle at 0 0, transparent 0, #edefff 27px ), repeating-linear-gradient( #ffffff55, #ffffff );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
-    /* background-color: #ffffff;
+
+        /* background-color: #ffffff;
     opacity: 1;
     background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 27px ), repeating-linear-gradient( #EDEFFF55, #EDEFFF ); */
 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 
 }
 

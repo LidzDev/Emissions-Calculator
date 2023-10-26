@@ -13,6 +13,7 @@ body {
     flex-direction: row; /*lines the flex boxes up in a row initially*/
     flex-wrap: wrap; /*moves boxes onto multiple lines*/
     justify-content: center;
+    align-items: center;
     /* align-items: stretch; might remove this- it should stretch the boxes so that they fill the container */
     padding: 20px;
     margin: 10px 50px;
@@ -21,7 +22,7 @@ body {
 
 .calc-form {
     /* background-color: #edefff; */
-    padding: 20px;
+    padding: 40px;
     margin: 20px;
     width: 350px;
 }
@@ -31,12 +32,19 @@ body {
     padding: 20px;
     margin: 20px;
     width: 350px;
+    height: 250px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;;
 
+}
+
+.form-output > h2 {
+    margin: 10px;
+    padding: 0px 40px;
 }
 
 
@@ -49,4 +57,14 @@ body {
 
 button {
     font-family: 'Inter', sans-serif;
+}
+
+.back-pattern {
+    background-color: #edefff;
+    opacity: 1;
+    background-image:repeating-radial-gradient( circle at 0 0, transparent 0, #edefff 27px ), repeating-linear-gradient( #ffffff55, #ffffff );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    padding: 26vh 0;
 }

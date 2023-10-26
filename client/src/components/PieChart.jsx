@@ -2,7 +2,7 @@ import React from "react";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 
-const PieChart = ({ pieChartData, drilldownData }) => {
+const PieChart = ({ pieChartData }) => {
     const options = {
         credits: {
             enabled: false,
@@ -19,6 +19,9 @@ const PieChart = ({ pieChartData, drilldownData }) => {
         subtitle: {
             text: "Selected employees emissions in relation to the whole company",
         },
+        tooltip: {
+            pointFormat: "<b>Emissions</b>: {point.y} kg",
+        },
         series: [
             {
                 data: pieChartData,
@@ -30,9 +33,6 @@ const PieChart = ({ pieChartData, drilldownData }) => {
                 },
             },
         ],
-        drilldown: {
-            series: drilldownData,
-        },
     };
 
     return (

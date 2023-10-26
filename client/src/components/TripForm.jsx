@@ -3,7 +3,7 @@ import TransportMode from "./TransportMode"
 import { postTrip } from "../services/TripService"
 import Employee from "./Employee"
 import "./static/TripForm.css"; 
-// import { toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 
 const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
@@ -63,10 +63,10 @@ const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
                     trips: 0
                 });
                 navigate('/triptable')
-                // toast.success('Submission Successful!', {
-                //     position: 'top-right',
-                //     autoClose: 3000,
-                // });
+                toast.success('Submission Successful!', {
+                    position: 'top-right',
+                    autoClose: 3000,
+                });
             });
     }
     

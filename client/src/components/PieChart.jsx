@@ -5,6 +5,9 @@ import HighchartsReact from "highcharts-react-official";
 const PieChart = ({ pieChartData }) => {
 
 const options = {
+    credits: { 
+        enabled: false 
+    },
     chart: {
         type: "pie"
     },

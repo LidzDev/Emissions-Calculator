@@ -94,7 +94,9 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
             <h2>Let's break things down a bit more...</h2>
             </section>
             <PieChart pieChartData={pieChartData} />
-            <Map employees={employees}/>
+            <br></br>
+            <br></br>
+            <Map employees={employees} />
         </>
     );
 }

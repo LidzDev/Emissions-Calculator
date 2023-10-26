@@ -18,7 +18,6 @@ function App() {
   const [totalEmissions, setTotalEmissions] = useState(0)
   const [tripEmissions, setTripEmissions] = useState(0)
 
-
   useEffect(() => {
     TransportService.getModesOfTransport()
       .then((modes) => setModes(modes))
@@ -27,7 +26,6 @@ function App() {
       .then(() => getTrips())
       .then(emissionsTrip => setEmissionsTrip(emissionsTrip))
   }, [])
-
 
   useEffect(() => {
     fetch('http://localhost:9000/api/trips/total-emissions')

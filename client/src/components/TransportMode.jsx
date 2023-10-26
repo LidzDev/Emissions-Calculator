@@ -1,4 +1,3 @@
-
 const TransportMode = ({mode}) => {
 
     return (

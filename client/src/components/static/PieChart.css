@@ -1,0 +1,13 @@
+.charts {
+    font-family: 'Inter', sans-serif;
+    padding-top: 0px;
+
+    
+}
+
+#pie-chart {
+    background-color: #fff;
+    margin-top: 8vh;
+    margin-bottom: 10vh;
+    padding: 5vh 0;
+}

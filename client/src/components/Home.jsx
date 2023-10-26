@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import MainTitle from "./MainTitle"
 import TripForm from "./TripForm";
 import TripEmissionsTotal from "./TripEmissionsTotal";

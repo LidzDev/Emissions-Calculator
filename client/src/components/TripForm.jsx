@@ -1,10 +1,10 @@
-import {useState, useEffect} from "react"
 import TransportMode from "./TransportMode"
-import { postTrip } from "../services/TripService"
 import Employee from "./Employee"
-import "./static/TripForm.css"; 
+import { useState } from "react"
+import { postTrip } from "../services/TripService"
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
+import "./static/TripForm.css"; 
 
 const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
 
@@ -38,14 +38,10 @@ const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
             const transportEmissions = mode.emissions
             const newTripEmissions = (newFormData.distance * newFormData.trips * transportEmissions)
             newFormData.emissions = newTripEmissions
-            // if(!newFormData.emissions === NaN){
-                updateTripEmissions(newTripEmissions)
-            // }
+            updateTripEmissions(newTripEmissions)
         }
-            setFormData(newFormData);
+        setFormData(newFormData);
         
-        
-
     }
 
     const onSubmit = (e) => {
@@ -79,20 +75,21 @@ const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
                     onChange={onChange} 
                     id="employee" 
                     name="sid"
-                    defaultValue="">
+                    defaultValue=""
+                    required>
                     Employees
                     <option value="" disabled>--Select employee--</option>                   
                     {employeeNodes}
                     </select>
             </div>
             <div className="formWrap">
-
                 <label htmlFor="mode">Mode of Transport</label><br/>
                 <select 
                 onChange={onChange} 
                 id="mode" 
                 name="tid"
-                defaultValue="">
+                defaultValue=""
+                required>
                 Modes of Transport
                 <option value="" disabled>--Select transport--</option>
                 {transportNodes}
@@ -120,7 +117,9 @@ const TripForm = ({modes, employees, addTrip, updateTripEmissions}) => {
                     min="1"
                     />
             </div>
-            <input type="submit" value="Log this estimate" id="save"/>
+            <div className="save-btn">
+                <input type="submit" value="Log this estimate" id="save"/>
+            </div>
     </form>
 
     )

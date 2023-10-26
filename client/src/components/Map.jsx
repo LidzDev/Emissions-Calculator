@@ -10,6 +10,7 @@ const Map = ({ employees }) => {
         const coordinates = employee.coordinates
         const geocode = [coordinates.latitude, coordinates.longitude]
         const popUp = employee.name
+
         return (
             {
                 geocode: geocode,

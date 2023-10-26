@@ -4,18 +4,7 @@ import "./static/TripTable.css";
 import PieChart from "./PieChart";
 import Map from './Map';
 
-const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, employees, tripEmissions, updateTripEmissions }) => {
-
-
-    const handleUpdateTrip = () => {
-        updateTrip({
-            _id: trip._id,
-            sid: trip.sid,
-            tid: trip.tid,
-            distance: trip.distance,
-            trips: trip.trips
-        })
-    }
+const TripTable = ({ trips, removeTrip, totalEmissions, modes, employees }) => {
 
     const tripItems = trips.map((trip) => {
 
@@ -44,7 +33,6 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
 
     const emissionsKg = (totalEmissions / 1000).toFixed(2)
     const checkingEmissionsKg = isNaN(emissionsKg) ? 0 : emissionsKg
-
     const employeeEmissions = {};
 
     trips.forEach((trip) => {
@@ -63,7 +51,7 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
     const pieChartData = Object.entries(employeeEmissions).map(([name, emissions]) => ({
         name: name,
         y: emissions
-        }))
+    }))
 
     return (
         <>
@@ -85,7 +73,6 @@ const TripTable = ({ trips, removeTrip, updateTrip, totalEmissions, modes, emplo
                                 <th>Distance (km)</th>
                                 <th>Trips per Week</th>
                                 <th>Emissions (kg)</th>
-                                {/* <th>*update</th> */}
                                 <th></th>
                             </tr>
                             {tripItems}

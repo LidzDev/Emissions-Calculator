@@ -10,7 +10,9 @@
     /* margin-bottom: 50px; */
     /* margin-left: 50px;
     margin-right: 50px; */
-    border: 5px solid #130E3D;
+    /* border: 5px solid #130E3D; */
+    border: 3px solid white;
+    border-radius: 10px;
     font-family: 'Inter', sans-serif;
 
 }

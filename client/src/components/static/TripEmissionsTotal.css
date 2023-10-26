@@ -5,15 +5,13 @@
     font-weight: bold;
     color: #6b5bff;
     margin: 5px;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 .results-link {
     color: #130e3d;
-    /* font-weight: bold; */
     margin: 5px;
 }
-
 
 .results-link:active {
     color: #1b998b;

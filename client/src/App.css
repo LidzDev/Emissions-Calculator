@@ -13,14 +13,14 @@ body {
     flex-direction: row; /*lines the flex boxes up in a row initially*/
     flex-wrap: wrap; /*moves boxes onto multiple lines*/
     justify-content: center;
-    align-items: stretch; /*might remove this- it should stretch the boxes so that they fill the container*/
+    /* align-items: stretch; might remove this- it should stretch the boxes so that they fill the container */
     padding: 20px;
     margin: 10px 50px;
 
 }
 
 .calc-form {
-    background-color: #edefff;
+    /* background-color: #edefff; */
     padding: 20px;
     margin: 20px;
     width: 350px;
@@ -38,6 +38,7 @@ body {
     align-items: center;
 
 }
+
 
 #trip-form > h2 {
     text-align: center;

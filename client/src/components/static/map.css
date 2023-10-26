@@ -16,3 +16,10 @@
     font-family: 'Inter', sans-serif;
 
 }
+
+.cluster-icon {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: red;
+}

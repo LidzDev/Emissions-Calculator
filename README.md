@@ -36,14 +36,17 @@ Launch the web app in your browser. Needs link
 
 Input employee commute data, including:
 
-Employee name
-Mode of transport
-Distance traveled (in kilometers)
-Frequency (how many times a week the journey is completed)
+- Employee name
+- Mode of transport
+- Distance traveled (in kilometers)
+- Frequency (how many times a week the journey is completed)
+
 The app will calculate and display a running total of Co2 emissions based on the user's input.
 
 To view the results, select the 'Results' section from the navigation bar. You can:
 
-See a list of user submissions.
-View employees Co2 emissions in relation to the whole company in the form of a pie chart. -View employees starting point of their commute on a map
-CREDITS Claire Martin, https://github.com/cemmartin Darren Lackie, https://github.com/PeterQuiznose Lydia Cordell, https://github.com/LidzDev/ Andrew Brown, https://github.com/andy-brown87
+- See a list of user submissions.
+- View employees Co2 emissions in relation to the whole company in the form of a pie chart.
+- View employees starting point of their commute on a map
+
+### CREDITS Claire Martin, https://github.com/cemmartin Darren Lackie, https://github.com/DarrenLackie Lydia Cordell, https://github.com/LidzDev/ Andrew Brown, https://github.com/andy-brown87

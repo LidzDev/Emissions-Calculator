@@ -49,4 +49,8 @@ To view the results, select the 'Results' section from the navigation bar. You c
 - View employees Co2 emissions in relation to the whole company in the form of a pie chart.
 - View employees starting point of their commute on a map
 
-### CREDITS Claire Martin, https://github.com/cemmartin Darren Lackie, https://github.com/DarrenLackie Lydia Cordell, https://github.com/LidzDev/ Andrew Brown, https://github.com/andy-brown87
+### Credits 
+Claire Martin, https://github.com/cemmartin 
+Darren Lackie, https://github.com/DarrenLackie 
+Lydia Cordell, https://github.com/LidzDev/ 
+Andrew Brown, https://github.com/andy-brown87

@@ -1,4 +1,4 @@
-# Co2 EMISSIONS CALCULATOR 
+# Co2 Emissions Calculator
 
 ## Summary
 A Co2 emmisions calculator that is capable of displaying the total Co2 output of a companies employee commutes.
@@ -50,7 +50,8 @@ To view the results, select the 'Results' section from the navigation bar. You c
 - View employees starting point of their commute on a map
 
 ### Credits 
-Claire Martin, https://github.com/cemmartin 
-Darren Lackie, https://github.com/DarrenLackie 
-Lydia Cordell, https://github.com/LidzDev/ 
-Andrew Brown, https://github.com/andy-brown87
+
+- [Claire Martin] (https://github.com/cemmartin)
+- [Darren Lackie] (https://github.com/DarrenLackie)
+- [Lydia Cordell] (https://github.com/LidzDev)
+- [Andrew Brown] (https://github.com/andy-brown87)

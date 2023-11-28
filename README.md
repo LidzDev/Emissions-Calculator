@@ -1,38 +1,38 @@
-# React + Vite
+# Co2 EMISSIONS CALCULATOR 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Summary
+A Co2 emmisions calculator that is capable of displaying the total Co2 output of a companies employee commutes.
 
-Currently, two official plugins are available:
+## Description
+We've been approached by an environmental sustainability consulting firm with a mission to help businesses minimise their carbon footprint. The challenge is to create a user-friendly application that computes a company's carbon emissions, primarily based on employee travel. This project will not only assist businesses in understanding their environmental impact but also encourage sustainable choices in travel and help protect the planet.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation instructions 
+To run the web app, please follow these steps:
 
-Co2 EMISSIONS CALCULATOR TITLE A Co2 emmisions calculator that is capable of displaying the total Co2 output of a companies employee commutes.
+1.  Clone the repository from (https://github.com/LidzDev/Emissions-Calculator) by:
+    - On GitHub.com navigate to the main page of the repository;
+    - Above the list of files, click <>Code;
+    - Copy the URL of the repository;
+    - Open Terminal;
+    - Change the current working directory to the location where you want the cloned directory;
+    - Type `git clone`, and then paste the URL you copied earlier, and hit enter.
+2.  Set up the server:
+    - Navigate to the server directory on the terminal;
+    - Install dependencies `npm i`
+3.  Run the server in development mode:
+     `npm run server:dev`
+4.  Seed the database:
+    `npm run seed`
+5.  Set up the client:
+    - Navigate to the client directory.
+    - Install dependencies: `npm install react-leaflet`
+    - run `npm i`
+6.   Run the client in development mode:
+     `npm run dev`
+     
+## How to use it
 
-DESCRIPTION We've been approached by an environmental sustainability consulting firm with a mission to help businesses minimise their carbon footprint. The challenge is to create a user-friendly application that computes a company's carbon emissions, primarily based on employee travel. This project will not only assist businesses in understanding their environmental impact but also encourage sustainable choices in travel and help protect the planet.
-
-HOW TO INSTALL AND RUN To run the web app, follow these steps:
-
-Clone the repository:
-On GitHub.com navigate to the main page of the repository.
-Above the list of files, click <>Code
-Copy the URL of the repository
-Open Terminal.
-Change the current working directory to the location where you want the cloned directory.
-Type git clone, and then paste the URL you copied earlier.
-Press Enter to create your local clone.
-Set up the server:
-Navigate to the server directory.
-Install dependencies: npm install
-Run the server in development mode: npm run server:dev
-Seed the database: npm run seed
-Set up the client:
-Navigate to the client directory.
-Install dependencies: npm install npm install react-leaflet
-Run the client in development mode: npm run dev
-HOW TO USE THE WEB APP
-
-Launch the web app in your browser.
+Launch the web app in your browser. Needs link
 
 Input employee commute data, including:
 

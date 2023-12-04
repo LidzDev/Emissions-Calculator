@@ -9,7 +9,6 @@ We've been approached by an environmental sustainability consulting firm with a 
 ## Dependencies
 - Node JS v 20
 - MongoDB 
-- 
 
 ##  Installation instructions in short
 run the following in a terminal

@@ -6,10 +6,29 @@ A Co2 emmisions calculator that is capable of displaying the total Co2 output of
 ## Description
 We've been approached by an environmental sustainability consulting firm with a mission to help businesses minimise their carbon footprint. The challenge is to create a user-friendly application that computes a company's carbon emissions, primarily based on employee travel. This project will not only assist businesses in understanding their environmental impact but also encourage sustainable choices in travel and help protect the planet.
 
-## Installation instructions 
+## Dependencies
+- Node JS v 20
+- MongoDB 
+- 
+
+##  Installation instructions in short
+run the following in a terminal
+```
+git clone git@github.com:LidzDev/Emissions-Calculator.git
+cd Emissions-Calculator
+cd server
+npm i
+npm run server:dev
+npm run seed
+cd ../client
+npm i
+npm run dev
+```
+
+## Installation Instructions long form
 To run the web app, please follow these steps:
 
-1.  Clone the repository from (https://github.com/LidzDev/Emissions-Calculator) by:
+1.  Clone the [github repository](https://github.com/LidzDev/Emissions-Calculator)
     - On GitHub.com navigate to the main page of the repository;
     - Above the list of files, click <>Code;
     - Copy the URL of the repository;
@@ -32,7 +51,7 @@ To run the web app, please follow these steps:
      
 ## How to use it
 
-Launch the web app in your browser. Needs link
+Launch the [web app](http://localhost:5173/)
 
 Input employee commute data, including:
 
